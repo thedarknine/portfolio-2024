@@ -3,15 +3,205 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Welcome!{% endblock %}</title>
+
+        <meta name="keywords" content="CV,Design,Product Owner,Développeur,Développeur web full-stack,PHP,Symfony">
+        <meta name="author" content="Caroline Noyer">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="index,follow">
+        <meta name="googlebot" content="index,follow">
+
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+        
         <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text><text y=%221.3em%22 x=%220.2em%22 font-size=%2276%22 fill=%22%23fff%22>sf</text></svg>">
         {% block stylesheets %}
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+            <link rel="stylesheet" href="{{ asset('styles/app.scss') }}">
         {% endblock %}
 
         {% block javascripts %}
-            {# % block importmap %}{{ importmap('app') }}{% endblock % #}
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+            <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+            <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+            <script src="{{ asset('js/wow.js') }}"></script>
+
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
     </head>
-    <body>
-        {% block body %}{% endblock %}
+    <body class="bg-white" style="overflow: visible;">
+        <div class="main">
+            <!--Header-->
+            <header class="bg-transparent sticky-bar mt-4">
+                <div class="container bg-transparent">
+                    <nav class="bg-transparent flex justify-between items-center py-3">
+                        <a class="text-3xl font-semibold leading-none" href="https://wp.alithemes.com/html/monst/index.html">
+                            <img id="logo" class="h-10" src="https://medias.carolinenoyer.fr/images/logo-cnoyer-full-250-white.svg" alt="">
+                        </a>
+                        <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
+                            <li class="pt-4 pb-4"><a href="https://wp.alithemes.com/html/monst/index.html" class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500">Home</a>
+                            </li>
+                            <li class="pt-4 pb-4"><a class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" href="https://wp.alithemes.com/html/monst/about.html">About Us</a>
+                            </li>
+                            <li class="pt-4 pb-4"><a class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" href="https://wp.alithemes.com/html/monst/services.html">Services</a>
+                            </li>
+                            <li class="pt-4 pb-4"><a class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" href="https://wp.alithemes.com/html/monst/#">Company</a>
+                            </li>
+                            <li class="pt-4 pb-4"><a class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" href="https://wp.alithemes.com/html/monst/#">Blog</a>
+                            </li>
+                            <li class="pt-4 pb-4"><a class="text-sm font-semibold text-blueGray-600 hover:text-blueGray-500" href="https://wp.alithemes.com/html/monst/contact.html">Contact</a></li>
+                        </ul>
+                        <div class="lg:hidden">
+                            <button class="navbar-burger flex items-center py-2 px-3 text-blue-500 hover:text-blue-700">
+                                <svg class="fill-current h-4 w-4" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
+                                    <title>Mobile menu</title>
+                                    <path d="M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+            <!--Mobile menu-->
+            <div class="hidden navbar-menu relative z-50 transition duration-300">
+                <div class="navbar-backdrop fixed inset-0 bg-blueGray-800 opacity-25"></div>
+                <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto transition duration-300">
+                    <div class="flex items-center mb-8">
+                        <a class="mr-auto text-3xl font-semibold leading-none" href="https://wp.alithemes.com/html/monst/#">
+                            <img class="h-10" src="https://medias.carolinenoyer.fr/images/logo-cnoyer-full-250.svg" alt="">
+                        </a>
+                        <button class="navbar-close">
+                            <svg class="h-6 w-6 text-blue-gray-400 cursor-pointer hover:text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                            </svg>
+                        </button>
+                    </div>
+                    <div>
+                        <ul class="mobile-menu">
+                            <li class="mb-1 rounded-xl">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl" href="https://wp.alithemes.com/html/monst/#">Home</a>
+                            </li>
+                            <li class="mb-1 rounded-xl">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl" href="https://wp.alithemes.com/html/monst/about.html">About Us</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="https://wp.alithemes.com/html/monst/services.html">Services</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="https://wp.alithemes.com/html/monst/portfolio.html">Portfolio</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="https://wp.alithemes.com/html/monst/pricing.html">Pricing</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="https://wp.alithemes.com/html/monst/team.html">Team</a>
+                            </li>
+                            <li class="mb-1 rounded-xl">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="https://wp.alithemes.com/html/monst/team.html">Blog</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="https://wp.alithemes.com/html/monst/faqs.html">Faqs</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="https://wp.alithemes.com/html/monst/testimonials.html">Testimonial</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="https://wp.alithemes.com/html/monst/contact.html">Contact Us</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!--div class="mt-auto">
+                        <p class="my-4 text-xs text-blue-gray-400">
+                            <span>Get in Touch</span>
+                            <a class="text-blue-500 hover:text-blue-500 underline" href="https://wp.alithemes.com/html/monst/#">contact@monst.com</a>
+                        </p>
+                        <a class="inline-block px-1" href="https://wp.alithemes.com/html/monst/#">
+                            <img src="./Monst_Page_files/facebook-blue.svg" alt="">
+                        </a>
+                        <a class="inline-block px-1" href="https://wp.alithemes.com/html/monst/#">
+                            <img src="./Monst_Page_files/twitter-blue.svg" alt="">
+                        </a>
+                        <a class="inline-block px-1" href="https://wp.alithemes.com/html/monst/#">
+                            <img src="./Monst_Page_files/instagram-blue.svg" alt="">
+                        </a>
+                    </div-->
+                </nav>
+            </div>
+
+            <!--Hero-->
+            <section class="home-area -mt-24 pt-24">
+                <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
+                    <div class="pt-12 text-center">
+                        <img class="jump rounded wow animate__animated animate__fadeInUp animated" src="https://carolinenoyer.fr/images/logo-nine-2021.png" alt="" style="visibility: visible; animation-name: jump;">
+                    </div>
+                    <div class="mb-16 lg:mt-32 xl:mt-40 xl:mr-12">
+                        <div class="max-w-2xl mx-auto mb-8">
+                            <h2 class="text-3xl lg:text-5xl lg:leading-normal mb-4 font-bold font-heading wow animate__ animate__fadeIn animated" style="visibility: visible; animation-name: fadeIn;">Passionnée par le <span class="text-blue-500">digital</span> depuis 2005</h2>
+                            <p class="text-blue-gray-400 leading-relaxed wow animate__ animate__fadeIn animated" style="visibility: visible; animation-name: fadeIn;"><strong class="text-blue-500">Expérience</strong> en <span class="typewrite d-inline text-brand" data-period="3000" data-type="[&quot;Product Owner&quot;, &quot;UX Design&quot;, &quot;Développement web&quot; ]"></span></p>
+                        </div>
+                        <div>
+                            <a class="btn-primary py-4 px-8 mr-2 wow animate__ animate__fadeInUp hover-up-2 animated" href="https://wp.alithemes.com/html/monst/#key-features" style="visibility: visible; animation-name: fadeInUp;">Key Features</a>
+                            <a class="btn-white wow animate__ animate__fadeInUp hover-up-2 animated" data-wow-delay=".3s" href="https://wp.alithemes.com/html/monst/#how-we-work" style="visibility: visible; animation-delay: 0.3s; animation-name: fadeInUp;">How We Work?</a>
+                        </div>
+                    </div>
+                </div> <!-- end of container -->
+
+                <div class="debug">
+                <img src="https://carolinenoyer.fr/images/main/wave-shape.svg" class="bottom-shape img-fluid" alt="">
+                </div>
+                
+
+            </section>
+            <!--Features-->
+
+        {% block body %}
+        <div style="height: 1000px;"></div>
+        {{page}}
+        {% endblock %}
+        
+
+            <!-- Footer start -->
+            <footer class="py-20 footer">
+                <section class="py-20">
+                    <div class="container px-4 mx-auto wow animate__animated animate__fadeIn" data-wow-delay=".3s" style="visibility: hidden; animation-delay: 0.3s; animation-name: none;">
+                        <div class="flex flex-wrap mb-12 lg:mb-20 -mx-3 text-center lg:text-left">
+                            <div class="w-full lg:w-1/5 px-3 mb-6 lg:mb-0">
+                                <a class="inline-block mx-auto lg:mx-0 text-3xl font-semibold leading-none" href="https://wp.alithemes.com/html/monst/index.html">
+                                    <img class="h-10" src="https://medias.carolinenoyer.fr/images/logo-2024-colored.png" alt="">
+                                </a>
+                            </div>
+                            <div class="w-full lg:w-2/5 px-3 mb-8 lg:mb-0">
+                                <p class="max-w-md mx-auto lg:max-w-full lg:mx-0 lg:pr-32 lg:text-lg text-blue-gray-400 leading-relaxed">Helping you <strong>maximize</strong> operations management with digitization</p>
+                            </div>
+                            <div class="w-full lg:w-1/5 px-3 mb-8 lg:mb-0">
+                                <p class="mb-2 lg:mb-4 lg:text-lg text-smallcaps text-turquoise">Parcours</p>
+                                <p class="lg:text-lg text-blue-gray-400">359 Hidden Valley Road, NY</p>
+                            </div>
+                            <div class="w-full lg:w-1/5 px-3">
+                                <p class="mb-2 lg:mb-4 lg:text-lg text-smallcaps text-turquoise">Centres d'intérêt</p>
+                                <p class="lg:text-lg text-blue-gray-400">(+01) 234 568</p>
+                                <p class="lg:text-lg text-blue-gray-400">contact@monst.com</p>
+                            </div>
+                        </div>
+                        <div class="flex flex-col lg:flex-row items-center lg:justify-between">
+                            <p class="text-sm text-blue-gray-400">© 2021. All rights reserved. Designed by <a class="text-blue-400" href="https://alithemes.com/" target="_blank">Alithemes.com</a></p>
+                            <div class="order-first lg:order-last -mx-2 mb-4 lg:mb-0">
+                                <a class="inline-block px-2" href="https://wp.alithemes.com/html/monst/#">
+                                    FB
+                                </a>
+                                <a class="inline-block px-2" href="https://wp.alithemes.com/html/monst/#">
+                                    twitter
+                                </a>
+                                <a class="inline-block px-2" href="https://wp.alithemes.com/html/monst/#">
+                                    instagram
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </footer>
+        </div>
+        <!-- Footer end -->
     </body>
 </html>

@@ -1,0 +1,3 @@
+# config/packages/symfonycasts_tailwind.yaml
+symfonycasts_tailwind:
+    input_css: 'assets/styles/app.scss'

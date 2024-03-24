@@ -9,7 +9,9 @@ cc:
 
 ## Build front-end
 build:
-	yarn build
+	php bin/console sass:build
+	php bin/console tailwind:build --minify
+	php bin/console asset-map:compile
 
 ## Run php cs-fixer
 cs:
@@ -18,7 +20,8 @@ cs:
 
 ## Run dev front-end
 watch:
-	yarn encore dev --watch
+## php bin/console sass:build --watch
+	php bin/console tailwind:build --watch
 
 ## Update MySQL schema
 mysql-update:
@@ -40,6 +43,8 @@ dev:
 
 ## Build to production
 prod:
+	php bin/console tailwind:build --minify
+	php bin/console asset-map:compile
 	composer dump-env prod
 	composer install --no-dev --optimize-autoloader
 	APP_ENV=prod APP_DEBUG=0 php bin/console cache:clear
