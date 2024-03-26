@@ -1,0 +1,149 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@config "../../tailwind.config.js";
+
+@import "https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap";
+@import "animations";
+
+@layer base {
+    html {
+      font-family: theme("fontFamily.normal");
+      color: theme("colors.blue-dark");
+    }
+  }
+  
+.debug {
+  @apply border-2 border-solid;
+  border: theme("colors.red-nine") !important;
+}
+
+.gradient {
+    background: linear-gradient(
+        to right bottom,
+        theme("colors.blue-dark") 0%,
+        theme("colors.turquoise") 51%,
+        theme("colors.blue-dark") 100%
+    );
+}
+
+.text-smallcaps {
+    font-variant: small-caps;
+}
+
+.visible{
+	visibility: visible !important;
+}
+.static{
+	position: static !important;
+}
+.fixed{
+	position: fixed !important;
+}
+.absolute{
+	position: absolute !important;
+}
+.relative{
+	position: relative !important;
+}
+
+.items-center {
+    align-items: center !important;
+}
+
+.z-1000{
+	z-index: 1000 !important;
+}
+.z-0{
+	z-index: 0 !important;
+}
+
+.container{
+	width: 100%;
+	margin-right: auto;
+	margin-left: auto;
+	padding-right: 1rem;
+	padding-left: 1rem;
+}
+@media (min-width: 640px){
+	.container{
+		max-width: 640px;
+	}
+}
+@media (min-width: 768px){
+	.container{
+		max-width: 768px;
+	}
+}
+@media (min-width: 1024px){
+	.container{
+		max-width: 1024px;
+	}
+}
+@media (min-width: 1200px){
+	.container{
+		max-width: 1200px;
+	}
+}
+
+/*HEADER*/
+.sticky-bar {
+  font-family: theme("fontFamily.accent");
+  color: #fff;
+  position: relative;
+  z-index: 3;
+
+  a:hover {
+    background-color: rgba(106 106 106 / 30%);
+    border-radius: 4px;
+    transition-duration: 0.6s;
+    transition-timing-function: ease-out;
+  }
+}
+
+.sticky-bar.stick {
+  -webkit-animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
+  animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
+  box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.05);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 999;
+  left: 0;
+  transition: all 0.3s ease 0s;
+  background: #fff;
+  color: theme("colors.blue-nine");
+  margin-top: 0 !important;
+}
+
+.transition{
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-backdrop-filter !important;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter !important;
+	transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-backdrop-filter !important;
+	transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1) !important;
+	transition-duration: 150ms !important;
+}
+.duration-300{
+	transition-duration: 300ms !important;
+}
+.opacity-25{
+  background-color: rgba(30, 41, 59, var(--tw-bg-opacity)) !important;
+	opacity: 0.25 !important;
+}
+
+.home-area {
+	background: url(https://carolinenoyer.fr/images/volcans-cnoyer.png) no-repeat 50%;
+    background-size: cover;
+    height: 100vh;
+    padding-top: 130px;
+    position: relative;
+    z-index: 1;
+}
+
+
+
+.footer {
+	background-color: theme("colors.blue-dark");
+	color: #fff;
+}
