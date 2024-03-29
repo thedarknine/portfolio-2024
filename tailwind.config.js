@@ -26,6 +26,9 @@ module.exports = {
       'accent': ['Spartan', 'sans-serif'],
       'normal': ['Oxygen', '"Open Sans"', 'Arial', 'sans-serif'],
     },
+    transitionDuration: {
+      DEFAULT: '300ms',
+    },
     extend: {},
   },
   plugins: [],

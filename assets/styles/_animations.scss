@@ -21,3 +21,11 @@
     -webkit-animation: jump 1s linear alternate infinite;
     animation: jump 1s linear alternate infinite;
 }
+
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
+}
+
+@-webkit-keyframes slide-in {
+    100% { -webkit-transform: translateX(0%); }
+}

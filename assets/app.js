@@ -9,6 +9,7 @@
 import './styles/app.scss';
 
 import Typed from 'typed.js';
+import 'animate.css';
 const WOW = require('wowjs');
 
 // create global $ and jQuery variables
