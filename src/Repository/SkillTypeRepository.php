@@ -29,28 +29,18 @@ class SkillTypeRepository extends ServiceEntityRepository
         parent::__construct($registry, SkillType::class);
     }
 
-    //    /**
-    //     * @return SkillType[] Returns an array of SkillType objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('s')
-    //            ->andWhere('s.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('s.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
+    /**
+     * @return SkillType[] Returns an array of SkillType objects
+     */
+    public function getSkillTypes(): array
+    {
+        $qb = $this->createQueryBuilder('sklt');
+        $qb
+            ->select('sklt')
+            ->orderBy('sklt.position', 'ASC');
 
-    //    public function findOneBySomeField($value): ?SkillType
-    //    {
-    //        return $this->createQueryBuilder('s')
-    //            ->andWhere('s.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+        return $qb
+            ->getQuery()
+            ->getResult();
+    }
 }

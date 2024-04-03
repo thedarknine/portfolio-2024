@@ -145,7 +145,7 @@
         </div>
     </div>
 
-    <div class="px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12 text-blue-dark pb-24" data-aos="fade-right">
+    <div class="px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12 text-blue-dark pb-24">
         <div class="lg:col-span-5">
             <div class="mb-16 lg:mb-0 xl:mt-16 wow animate__animated animate__fadeInLeft">
                 <div class="w-10/12 sm:w-12/12 mx-auto">
@@ -195,7 +195,7 @@
         </div> 
     </div> 
 
-    <div class="px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12 text-blue-dark" data-aos="fade-left">
+    <div class="px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12 text-blue-dark">
         <div class="lg:col-span-5 ">
             <div class="mb-16 lg:mb-0 xl:mt-16 wow animate__animated animate__fadeInLeft">
                 <div class="w-10/12 sm:w-12/12 mx-auto">
@@ -330,3 +330,8 @@
 </section>
 
 {% endblock body %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('home') }}
+{% endblock %}

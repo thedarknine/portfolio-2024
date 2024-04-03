@@ -29,28 +29,18 @@ class ArcadeTypeRepository extends ServiceEntityRepository
         parent::__construct($registry, ArcadeType::class);
     }
 
-    //    /**
-    //     * @return ArcadeType[] Returns an array of ArcadeType objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('a')
-    //            ->andWhere('a.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('a.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
+    /**
+     * @return ArcadeType[] Returns an array of ArcadeType objects
+     */
+    public function getArcadeTypes(): array
+    {
+        $qb = $this->createQueryBuilder('arc');
+        $qb
+            ->select('arc')
+            ->orderBy('arc.position', 'ASC');
 
-    //    public function findOneBySomeField($value): ?ArcadeType
-    //    {
-    //        return $this->createQueryBuilder('a')
-    //            ->andWhere('a.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+        return $qb
+            ->getQuery()
+            ->getResult();
+    }
 }

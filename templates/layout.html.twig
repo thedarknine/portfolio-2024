@@ -25,24 +25,28 @@
     <body>
         <div class="main">
             <!--Header-->
-            <header class="bg-transparent sticky-bar">
+            <header class="bg-transparent sticky-bar{% if page != 'home' %} stick{% endif %}">
                 <div class="container bg-transparent">
                     <nav class="bg-transparent flex justify-between items-center py-3">
-                        <a class="text-3xl font-semibold leading-none" href="https://wp.alithemes.com/html/monst/index.html">
-                            <img id="logo" class="h-10" src="https://medias.carolinenoyer.fr/images/logo-cnoyer-full-250-white.svg" alt="">
+                        <a class="text-3xl font-semibold leading-none" href="/">
+                            <img id="logo" class="h-10" src="https://medias.carolinenoyer.fr/images/logo-cnoyer-full-250{% if page == 'home' %}-white{% endif %}.svg" alt="">
                         </a>
-                        <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-12">
-                            <li class="p-4 menu-item"><a href="https://wp.alithemes.com/html/monst/index.html" class="text-sm font-semibold text-blueGray-600">Home</a>
+                        <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-5">
+                            <li class="p-4 menu-item">
+                                <a class="text-blueGray-600" href="/experience">Expérience</a>
                             </li>
-                            <li class="p-4 menu-item"><a class="text-sm font-semibold text-blueGray-600" href="https://wp.alithemes.com/html/monst/about.html">About Us</a>
+                            <li class="p-4 menu-item">
+                                <a class="text-blueGray-600" href="/competences">Compétences</a>
                             </li>
-                            <li class="p-4 menu-item"><a class="text-sm font-semibold text-blueGray-600" href="https://wp.alithemes.com/html/monst/services.html">Services</a>
+                            <li class="p-4 menu-item">
+                                <a class="text-blueGray-600" href="/formation">Formation</a>
                             </li>
-                            <li class="p-4 menu-item"><a class="text-sm font-semibold text-blueGray-600" href="https://wp.alithemes.com/html/monst/#">Company</a>
+                            <li class="p-4 menu-item">
+                                <a class="text-blueGray-600" href="/projets">Projets</a>
                             </li>
-                            <li class="p-4 menu-item"><a class="text-sm font-semibold text-blueGray-600" href="https://wp.alithemes.com/html/monst/#">Blog</a>
+                            <li class="p-4 menu-item">
+                                <a class="text-blueGray-600" href="/arcade">Arcade</a>
                             </li>
-                            <li class="p-4 menu-item"><a class="text-sm font-semibold text-blueGray-600" href="https://wp.alithemes.com/html/monst/contact.html">Contact</a></li>
                         </ul>
                         <div class="lg:hidden">
                             <button class="navbar-burger flex items-center py-2 px-3 text-blue-500 hover:text-blue-700">
@@ -74,35 +78,20 @@
                     </div>
                     <div>
                         <ul class="mobile-menu">
-                            <li class="mb-1 rounded-xl">
-                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl" href="https://wp.alithemes.com/html/monst/#">Home</a>
-                            </li>
-                            <li class="mb-1 rounded-xl">
-                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500 rounded-xl" href="https://wp.alithemes.com/html/monst/about.html">About Us</a>
+                            <li class="mb-1">
+                                <a class="block p-4 text-blueGray-500" href="/experience">Expérience</a>
                             </li>
                             <li class="mb-1">
-                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="https://wp.alithemes.com/html/monst/services.html">Services</a>
+                                <a class="block p-4 text-blueGray-500" href="/competences">Compétences</a>
                             </li>
                             <li class="mb-1">
-                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="https://wp.alithemes.com/html/monst/portfolio.html">Portfolio</a>
+                                <a class="block p-4 text-blueGray-500" href="/formation">Formation</a>
                             </li>
                             <li class="mb-1">
-                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="https://wp.alithemes.com/html/monst/pricing.html">Pricing</a>
+                                <a class="block p-4 text-blueGray-500" href="/projets">Projets</a>
                             </li>
                             <li class="mb-1">
-                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="https://wp.alithemes.com/html/monst/team.html">Team</a>
-                            </li>
-                            <li class="mb-1 rounded-xl">
-                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="https://wp.alithemes.com/html/monst/team.html">Blog</a>
-                            </li>
-                            <li class="mb-1">
-                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="https://wp.alithemes.com/html/monst/faqs.html">Faqs</a>
-                            </li>
-                            <li class="mb-1">
-                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="https://wp.alithemes.com/html/monst/testimonials.html">Testimonial</a>
-                            </li>
-                            <li class="mb-1">
-                                <a class="block p-4 text-sm text-blueGray-500 hover:bg-blue-50 hover:text-blue-500" href="https://wp.alithemes.com/html/monst/contact.html">Contact Us</a>
+                                <a class="block p-4 text-blueGray-500" href="/arcade">Arcade</a>
                             </li>
                         </ul>
                     </div>
@@ -124,11 +113,12 @@
                 </nav>
             </div>
 
-            {% block body %}{% endblock %}
-        
+            <div class="container mb-5">
+                {% block body %}{% endblock %}
+            </div>
         
             <!-- Footer start -->
-            <footer class="py-20 footer">
+            <footer class="py-20 mt-5 footer">
                 <section class="py-20">
                     <div class="container px-4 mx-auto">
                         <div class="flex flex-wrap mb-12 lg:mb-20 -mx-3 text-center lg:text-left">
@@ -183,6 +173,8 @@
             <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
             <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
             <script src="https://kit.fontawesome.com/e13f84fe9c.js" crossorigin="anonymous"></script>
+
+            <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.13.8/dist/cdn.min.js"></script>
             
             {{ encore_entry_script_tags('app') }}
         {% endblock %}

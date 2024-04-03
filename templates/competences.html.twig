@@ -1,0 +1,16 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Compétences{% endblock %}
+
+{% block body %}
+    <div class="pt-24">
+        {% embed "blocks/title.html.twig" with {'pagetitle':"Compétences"} %}{% endembed %}
+    </div>
+
+    {% for type in data.skillTypesList %}
+        <section class="{% if loop.index is even %}lighten{% else %}bg-gray{% endif %}">
+            {{ type.name }}
+        </section>
+    {% endfor %}
+
+{% endblock %}

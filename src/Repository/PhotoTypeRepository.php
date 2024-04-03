@@ -29,28 +29,18 @@ class PhotoTypeRepository extends ServiceEntityRepository
         parent::__construct($registry, PhotoType::class);
     }
 
-    //    /**
-    //     * @return PhotoType[] Returns an array of PhotoType objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('p')
-    //            ->andWhere('p.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('p.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
+    /**
+     * @return PhotoType[] Returns an array of PhotoType objects
+     */
+    public function getPhotoTypes(): array
+    {
+        $qb = $this->createQueryBuilder('phot');
+        $qb
+            ->select('phot')
+            ->orderBy('phot.position', 'ASC');
 
-    //    public function findOneBySomeField($value): ?PhotoType
-    //    {
-    //        return $this->createQueryBuilder('p')
-    //            ->andWhere('p.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+        return $qb
+            ->getQuery()
+            ->getResult();
+    }
 }

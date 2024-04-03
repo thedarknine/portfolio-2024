@@ -21,6 +21,7 @@ module.exports = {
       'gray-nine': '#94a3b8',
       'red-nine': '#991b1b',
       'blue-gray-400': '#94a3b8',
+      'gray-light-nine': '#CFD7E8',
     },
     fontFamily: {
       'accent': ['Spartan', 'sans-serif'],
@@ -29,7 +30,19 @@ module.exports = {
     transitionDuration: {
       DEFAULT: '300ms',
     },
-    extend: {},
+    extend: {
+      animation: {
+        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+      },
+      keyframes: {
+        'infinite-scroll': {
+          from: { transform: 'translateX(0)' },
+          to: { transform: 'translateX(-100%)' },
+        }
+      }
+    },
   },
-  plugins: [],
+  plugins: [
+    require('tailwindcss-animatecss'),
+  ],
 }

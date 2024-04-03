@@ -29,28 +29,18 @@ class CreationTypeRepository extends ServiceEntityRepository
         parent::__construct($registry, CreationType::class);
     }
 
-    //    /**
-    //     * @return CreationType[] Returns an array of CreationType objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('c')
-    //            ->andWhere('c.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('c.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
+    /**
+     * @return CreationType[] Returns an array of CreationType objects
+     */
+    public function getCreationTypes(): array
+    {
+        $qb = $this->createQueryBuilder('crea');
+        $qb
+            ->select('crea')
+            ->orderBy('crea.position', 'ASC');
 
-    //    public function findOneBySomeField($value): ?CreationType
-    //    {
-    //        return $this->createQueryBuilder('c')
-    //            ->andWhere('c.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+        return $qb
+            ->getQuery()
+            ->getResult();
+    }
 }

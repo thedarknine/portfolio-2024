@@ -29,28 +29,24 @@ class ExperienceRepository extends ServiceEntityRepository
         parent::__construct($registry, Experience::class);
     }
 
-    //    /**
-    //     * @return Experience[] Returns an array of Experience objects
-    //     */
-    //    public function findByExampleField($value): array
-    //    {
-    //        return $this->createQueryBuilder('e')
-    //            ->andWhere('e.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->orderBy('e.id', 'ASC')
-    //            ->setMaxResults(10)
-    //            ->getQuery()
-    //            ->getResult()
-    //        ;
-    //    }
+    /**
+     * @return Experience[] Returns an array of Experience objects
+    */
+    public function getExperiencesWithCompany(int $limit = null): array
+    {
+        $qb = $this->createQueryBuilder('exp');
+        $qb
+            ->select('exp')
+            ->innerJoin('exp.company', 'comp')
+            ->addSelect('comp')
+            ->orderBy('exp.startDate', 'DESC');
 
-    //    public function findOneBySomeField($value): ?Experience
-    //    {
-    //        return $this->createQueryBuilder('e')
-    //            ->andWhere('e.exampleField = :val')
-    //            ->setParameter('val', $value)
-    //            ->getQuery()
-    //            ->getOneOrNullResult()
-    //        ;
-    //    }
+        if ($limit) {
+            $qb->setMaxResults(3);
+        }
+
+        return $qb
+            ->getQuery()
+            ->getResult();
+    }
 }

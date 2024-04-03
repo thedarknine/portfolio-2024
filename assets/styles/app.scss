@@ -118,7 +118,7 @@
     &:hover {
         background-position: right center;
         color: white;
-        box-shadow: 0 15px 30px 0 rgb(46 54 78 / 20%);
+        box-shadow: 0 0px 30px -15px rgb(46 54 78 / 20%);
     }
 }
 
@@ -134,6 +134,7 @@
     z-index: 3;
 
     .menu-item {
+        @apply font-semibold;
         border-bottom: 4px solid transparent;
     }
 
@@ -144,6 +145,10 @@
         transition-duration: 0.6s;
         transition-delay: 0.3s;
         transition-timing-function: ease-out;
+    }
+
+    &.stick .menu-item:hover {
+        color: theme("colors.turquoise");
     }
 }
 
@@ -168,7 +173,20 @@
 
 }
 
+.page-title {
+    @apply text-5xl font-bold leading-tight text-center text-perfect;
 
+    /*&::before {
+        position: absolute;
+        height: 60px;
+        width: 2px;
+        background: #615CFD;
+        content: ' ';
+        left: 50%;
+        bottom: 100%;
+        visibility: visible;
+    }*/
+}
 
 
 /*HOME*/
