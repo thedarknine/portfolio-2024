@@ -11,6 +11,11 @@ cc:
 build:
 	yarn build
 
+## Build back-end
+build-php:
+	composer validate
+	composer install
+
 ## Run php cs-fixer
 cs:
 	vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --diff --verbose

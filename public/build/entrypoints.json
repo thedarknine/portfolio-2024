@@ -3,8 +3,18 @@
     "app": {
       "js": [
         "/build/runtime.js",
-        "/build/vendors-node_modules_symfony_stimulus-bridge_dist_index_js-node_modules_jquery_dist_jquery_js-7a0faa.js",
+        "/build/vendors-node_modules_animate_css_animate_css-node_modules_wowjs_dist_wow_js.js",
         "/build/app.js"
+      ],
+      "css": [
+        "/build/vendors-node_modules_animate_css_animate_css-node_modules_wowjs_dist_wow_js.css",
+        "/build/app.css"
+      ]
+    },
+    "home": {
+      "js": [
+        "/build/runtime.js",
+        "/build/home.js"
       ]
     }
   }

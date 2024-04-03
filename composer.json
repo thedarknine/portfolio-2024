@@ -1,4 +1,6 @@
 {
+    "name": "n9/portfolio",
+    "description": "Portfolio wwebsite 2024",
     "type": "project",
     "license": "proprietary",
     "minimum-stability": "stable",
@@ -35,7 +37,6 @@
         "symfony/serializer": "7.0.*",
         "symfony/stimulus-bundle": "^2.16",
         "symfony/string": "7.0.*",
-        "symfony/translation": "7.0.*",
         "symfony/twig-bundle": "7.0.*",
         "symfony/ux-turbo": "^2.16",
         "symfony/validator": "7.0.*",
