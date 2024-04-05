@@ -22,6 +22,7 @@ module.exports = {
       'red-nine': '#991b1b',
       'blue-gray-400': '#94a3b8',
       'gray-light-nine': '#CFD7E8',
+      'slate-light': '#cbd5e1',
     },
     fontFamily: {
       'accent': ['Spartan', 'sans-serif'],

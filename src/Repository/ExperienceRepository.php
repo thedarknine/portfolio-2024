@@ -31,8 +31,8 @@ class ExperienceRepository extends ServiceEntityRepository
 
     /**
      * @return Experience[] Returns an array of Experience objects
-    */
-    public function getExperiencesWithCompany(int $limit = null): array
+     */
+    public function getExperiencesWithCompany(?int $limit = null): array
     {
         $qb = $this->createQueryBuilder('exp');
         $qb

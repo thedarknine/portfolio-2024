@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 @config "../../tailwind.config.js";
-
 @import "https://fonts.googleapis.com/css2?family=Oxygen:wght@300;400;700&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Spartan:wght@100;200;300;400;500;600;700;800;900&display=swap";
 @import "animations";
@@ -17,6 +16,7 @@
   
 .debug {
   @apply border-2 border-solid;
+
   border: theme("colors.red-nine") !important;
 }
 
@@ -36,15 +36,19 @@
 .visible{
 	visibility: visible !important;
 }
+
 .static{
 	position: static !important;
 }
+
 .fixed{
 	position: fixed !important;
 }
+
 .absolute{
 	position: absolute !important;
 }
+
 .relative{
 	position: relative !important;
 }
@@ -56,6 +60,7 @@
 .z-1000{
 	z-index: 1000 !important;
 }
+
 .z-0{
 	z-index: 0 !important;
 }
@@ -67,29 +72,33 @@
 	padding-right: 1rem;
 	padding-left: 1rem;
 }
-@media (min-width: 640px){
+
+@media (width >= 640px){
 	.container{
 		max-width: 640px;
 	}
 }
-@media (min-width: 768px){
+
+@media (width >= 768px){
 	.container{
 		max-width: 768px;
 	}
 }
-@media (min-width: 1024px){
+
+@media (width >= 1024px){
 	.container{
 		max-width: 1024px;
 	}
 }
-@media (min-width: 1200px){
+
+@media (width >= 1200px){
 	.container{
 		max-width: 1200px;
 	}
 }
 
 .opacity-25 {
-    background-color: rgba(30, 41, 59, var(--tw-bg-opacity)) !important;
+    background-color: rgb(30 41 59 / var(--tw-bg-opacity)) !important;
     opacity: 0.25 !important;
 }
 
@@ -118,7 +127,7 @@
     &:hover {
         background-position: right center;
         color: white;
-        box-shadow: 0 0px 30px -15px rgb(46 54 78 / 20%);
+        box-shadow: 0 0 30px -15px rgb(46 54 78 / 20%);
     }
 }
 
@@ -126,7 +135,7 @@
     color: #a3a6a8 !important;
 }
 
-/*HEADER*/
+/* HEADER */
 .sticky-bar {
     font-family: theme("fontFamily.accent");
     color: #fff;
@@ -135,6 +144,7 @@
 
     .menu-item {
         @apply font-semibold;
+
         border-bottom: 4px solid transparent;
     }
 
@@ -153,9 +163,8 @@
 }
 
 .sticky-bar.stick {
-    -webkit-animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
     animation: 700ms ease-in-out 0s normal none 1 running fadeInDown;
-    box-shadow: 0 8px 10px 0 rgba(0, 0, 0, 0.06);
+    box-shadow: 0 8px 10px 0 rgb(0 0 0 / 6%);
     position: fixed;
     top: 0;
     width: 100%;
@@ -176,7 +185,7 @@
 .page-title {
     @apply text-5xl font-bold leading-tight text-center text-perfect;
 
-    /*&::before {
+    /* &::before {
         position: absolute;
         height: 60px;
         width: 2px;
@@ -185,13 +194,13 @@
         left: 50%;
         bottom: 100%;
         visibility: visible;
-    }*/
+    } */
 }
 
 
-/*HOME*/
+/* HOME */
 .home-area {
-	background: url(https://carolinenoyer.fr/images/volcans-cnoyer.png) no-repeat 50%;
+	background: url("https://carolinenoyer.fr/images/volcans-cnoyer.png") no-repeat 50%;
     background-size: cover;
     height: 100vh;
     padding-top: 130px;
@@ -228,11 +237,10 @@
 @apply text-xs font-semibold inline-block py-1 px-2 rounded-full text-blue-nine bg-light/50 uppercase mr-2 mt-2;
 }
 
-
-
-/*FOOTER*/
+/* FOOTER */
 .footer {
     @apply text-blue-gray-400;
+
 	background-color: theme("colors.blue-dark");
 }
 
@@ -240,11 +248,11 @@
     padding-left: 0;
     list-style: none;
 
-    .list-inline-item:not(:last-child) {
-        margin-right: 0.5rem;
-    }
-
     .list-inline-item {
         display: inline-block;
+    }
+
+    .list-inline-item:not(:last-child) {
+        margin-right: 0.5rem;
     }
 }

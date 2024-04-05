@@ -1,5 +1,13 @@
 <?php
 
+/**
+ * This file is part of Portfolio project.
+ * (c) Caroline Noyer <hello@carolinenoyer.info>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace App\DataFixtures;
 
 use App\Entity\ArcadeType;
@@ -117,6 +125,7 @@ class AppFixtures extends Fixture
         ['label' => 'postman', 'name' => 'Postman', 'startYear' => 2019, 'endYear' => null, 'level' => 5, 'logo' => 'postman.png', 'position' => 13, 'type' => 'sysadmin', 'display' => true],
         ['label' => 'slack', 'name' => 'Slack', 'startYear' => 2018, 'endYear' => null, 'level' => 7, 'logo' => 'slack.png', 'position' => 7, 'type' => 'methodo', 'display' => false],
         ['label' => 'teams', 'name' => 'Teams', 'startYear' => 2022, 'endYear' => null, 'level' => 4, 'logo' => 'teams.png', 'position' => 8, 'type' => 'methodo', 'display' => false],
+        ['label' => 'latex', 'name' => 'LaTeX', 'startYear' => 2002, 'endYear' => 2006, 'level' => 8, 'logo' => 'latex.png', 'position' => 9, 'type' => 'methodo', 'display' => false],
     ];
     private array $experiencesList = [
         ['label' => 'stage-limos', 'title' => 'Stagiaire en milieu de recherche', 'subtitle' => "Stage de recherche au sein de l'équipe Algorithmique au LIMOS",
@@ -131,7 +140,7 @@ class AppFixtures extends Fixture
          <p class="mt0 mr2"><a class="btn waves-effect btn-nine hvr-grow-shadow grey darken-1" href="http://docs.carolinenoyer.fr/pdf/article-clones-cla05.pdf" target="_blank" title="Efficient algorithms for clone items detection"><i class="fas fa-paperclip" aria-hidden="true"></i> Article publié</a></p>
     </div>
 </div>',
-            'startDate' => '2005-02-01', 'endDate' => '2005-07-31', 'company' => 'limos', 'skills' => ['cplus']],
+            'startDate' => '2005-02-01', 'endDate' => '2005-07-31', 'company' => 'limos', 'skills' => ['cplus', 'latex']],
         ['label' => 'stage-periscope', 'title' => 'Stagiaire études de projets Internet', 'subtitle' => 'Stage en entreprise dans le cadre du Master Professionnel SIPPE 2ème année',
             'description' => '
 <ul class="missions">

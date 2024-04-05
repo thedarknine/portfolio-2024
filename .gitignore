@@ -22,9 +22,9 @@
 .vscode
 
 ###> friendsofphp/php-cs-fixer ###
-/.php-cs-fixer.php
 /.php-cs-fixer.cache
 ###< friendsofphp/php-cs-fixer ###
+.twig-cs-fixer.cache
 
 ###> symfony/webpack-encore-bundle ###
 /node_modules/

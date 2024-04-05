@@ -1,16 +1,19 @@
-/*Animation*/
-@-webkit-keyframes jump {
-    0% {
-        transform: translate3d(0, 15px, 0);
-    }
-    100% {
-        transform: translate3d(0, 0, 0);
-    }
-}
+/* Animation */
 @keyframes jump {
     0% {
         transform: translate3d(0, 15px, 0);
     }
+
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes jump {
+    0% {
+        transform: translate3d(0, 15px, 0);
+    }
+    
     100% {
         transform: translate3d(0, 0, 0);
     }
@@ -18,7 +21,7 @@
 
 .jump {
     transform-origin: 0;
-    -webkit-animation: jump 1s linear alternate infinite;
+    animation: jump 1s linear alternate infinite;
     animation: jump 1s linear alternate infinite;
 }
 
@@ -26,6 +29,6 @@
     100% { transform: translateX(0%); }
 }
 
-@-webkit-keyframes slide-in {
-    100% { -webkit-transform: translateX(0%); }
+@keyframes slide-in {
+    100% { transform: translateX(0%); }
 }
