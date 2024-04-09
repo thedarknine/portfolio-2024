@@ -9,10 +9,10 @@
 
     {% for type in data.skillTypesList %}
         <section class="{% if loop.index is even %}bg-gray-light-nine{% else %}bg-white{% endif %} py-10">
-            <div class="container flex flex-col w-full mt-0 lg:flex-row sm:mt-10 lg:mt-10">
-                <div class="w-full max-w-md p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/4 wow animate__animated animate__fadeInLeft" data-wow-delay="0.6s">
+            <div class="container flex w-full mt-0 lg:flex-row sm:mt-10 lg:mt-10">
+                <div class="flex flex-col sticky md:top-36 w-full max-w-md p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/4 wow animate__animated animate__fadeInLeft" data-wow-delay="0.6s">
                     <h3 class="text-2xl text-turquoise font-semibold mb-6">{{ type.name }}</h3>
-                    <img src="{{ absolute_url('images/skills/' ~ type.logo) }}" alt="{{ type.name }}" width="250px" />
+                    <img src="{{ absolute_url('images/skills/' ~ type.logo) }}" alt="{{ type.name }}" width="250px">
                 </div>
 
                 <div class="w-full max-w-xl p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-3/4 wow animate__animated animate__fadeInRight" data-wow-delay="0.6s">
