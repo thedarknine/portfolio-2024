@@ -32,20 +32,20 @@
                             <img id="logo" class="h-10" src="https://medias.carolinenoyer.fr/images/logo-cnoyer-full-250{% if page == 'home' %}-white{% endif %}.svg" alt="">
                         </a>
                         <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-5">
-                            <li class="p-4 menu-item">
-                                <a class="text-blueGray-600" href="/experience">Expérience</a>
+                            <li class="p-4 menu-item {% if page == "experience" %}active{% endif %}">
+                                <a class="" href="/experience">Expérience</a>
                             </li>
-                            <li class="p-4 menu-item">
-                                <a class="text-blueGray-600" href="/competences">Compétences</a>
+                            <li class="p-4 menu-item {% if page == "competences" %}active{% endif %}">
+                                <a class="" href="/competences">Compétences</a>
                             </li>
-                            <li class="p-4 menu-item">
-                                <a class="text-blueGray-600" href="/formation">Formation</a>
+                            <li class="p-4 menu-item {% if page == "formation" %}active{% endif %}">
+                                <a class="" href="/formation">Formation</a>
                             </li>
-                            <li class="p-4 menu-item">
-                                <a class="text-blueGray-600" href="/projets">Projets</a>
+                            <li class="p-4 menu-item {% if page == "projets" %}active{% endif %}">
+                                <a class="" href="/projets">Projets</a>
                             </li>
-                            <li class="p-4 menu-item">
-                                <a class="text-blueGray-600" href="/arcade">Arcade</a>
+                            <li class="p-4 menu-item {% if page == "arcade" %}active{% endif %}">
+                                <a class="" href="/arcade">Arcade</a>
                             </li>
                         </ul>
                         <div class="lg:hidden">
@@ -113,7 +113,7 @@
                 </nav>
             </div>
 
-            <div class="{% if page != 'home' %}container  {% endif %}mb-5">
+            <div class="mb-5">
                 {% block body %}{% endblock %}
             </div>
 

@@ -177,4 +177,20 @@ class Skill
 
         return $this;
     }
+
+    public function getDuration(): ?string
+    {
+        if (null === $this->startYear) {
+            return 'En cours';
+        } else {
+            if (null === $this->endYear) {
+                $endYear = intval((new \DateTime())->format('Y'));
+            } else {
+                $endYear = $this->endYear;
+            }
+            $duration = $endYear - $this->startYear;
+
+            return strval($duration).' ans';
+        }
+    }
 }

@@ -22,11 +22,6 @@
 .jump {
     transform-origin: 0;
     animation: jump 1s linear alternate infinite;
-    animation: jump 1s linear alternate infinite;
-}
-
-@keyframes slide-in {
-    100% { transform: translateX(0%); }
 }
 
 @keyframes slide-in {

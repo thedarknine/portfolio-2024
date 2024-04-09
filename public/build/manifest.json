@@ -4,5 +4,7 @@
   "build/home.js": "/build/home.js",
   "build/runtime.js": "/build/runtime.js",
   "build/vendors-node_modules_animate_css_animate_css-node_modules_wowjs_dist_wow_js.css": "/build/vendors-node_modules_animate_css_animate_css-node_modules_wowjs_dist_wow_js.css",
-  "build/vendors-node_modules_animate_css_animate_css-node_modules_wowjs_dist_wow_js.js": "/build/vendors-node_modules_animate_css_animate_css-node_modules_wowjs_dist_wow_js.js"
+  "build/vendors-node_modules_animate_css_animate_css-node_modules_wowjs_dist_wow_js.js": "/build/vendors-node_modules_animate_css_animate_css-node_modules_wowjs_dist_wow_js.js",
+  "build/images/background-path-2.svg": "/build/images/background-path-2.58b5aadb.svg",
+  "build/images/background-path-2-gray.svg": "/build/images/background-path-2-gray.63a989a3.svg"
 }

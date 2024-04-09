@@ -146,15 +146,22 @@
         @apply font-semibold;
 
         border-bottom: 4px solid transparent;
-    }
 
-    .menu-item:hover {
-        background-color: rgba(106 106 106 / 30%);
-        border-radius: 6px;
-        border-bottom: 4px solid theme("colors.turquoise");
-        transition-duration: 0.6s;
-        transition-delay: 0.3s;
-        transition-timing-function: ease-out;
+        &:hover:not(.active) {
+            background-color: rgba(106 106 106 / 30%);
+            border-radius: 6px 6px 0 0;
+            border-bottom: 4px solid theme("colors.turquoise");
+            transition-duration: 0.6s;
+            transition-delay: 0.3s;
+            transition-timing-function: ease-out;
+        }
+
+        &.active {
+            font-weight: 600;
+            color: theme("colors.turquoise");
+            text-transform: uppercase;  
+            border-bottom: 2px solid rgba(30, 41, 59, 0.25);
+        }
     }
 
     &.stick .menu-item:hover {
@@ -181,22 +188,6 @@
     animation-delay: 2s;
 
 }
-
-.page-title {
-    @apply text-5xl font-bold leading-tight text-center text-perfect;
-
-    /* &::before {
-        position: absolute;
-        height: 60px;
-        width: 2px;
-        background: #615CFD;
-        content: ' ';
-        left: 50%;
-        bottom: 100%;
-        visibility: visible;
-    } */
-}
-
 
 /* HOME */
 .home-area {
@@ -256,3 +247,72 @@
         margin-right: 0.5rem;
     }
 }
+
+/* Experience */
+
+.bg-img-1 {
+    background: url('../../public/images/global/background-path-2.svg') no-repeat top center;
+}
+
+.bg-img-2 {
+    background: url('../../public/images/global/background-path-2-gray.svg') no-repeat top center;
+}
+
+.missions i.fa-tasks {
+    color: theme("colors.turquoise");
+    margin-right: 5px;
+}
+
+/* Skills */
+.skill {
+    @apply border-light border-solid;
+
+    border-width: 1px !important;
+    --tw-border-opacity: 0.5;
+}
+  
+.circular-progress {
+    --size: 100px;
+    --half-size: calc(var(--size) / 2);
+    --stroke-width: 10px;
+    --radius: calc((var(--size) - var(--stroke-width)) / 2);
+    --circumference: calc(var(--radius) * pi * 2);
+    --dash: calc((var(--level) * var(--circumference)) / 100);
+    /* animation: progress-animation 5s linear 0s 1 forwards; */
+}
+
+.circular-progress circle {
+    cx: var(--half-size);
+    cy: var(--half-size);
+    r: var(--radius);
+    stroke-width: var(--stroke-width);
+    fill: none;
+    stroke-linecap: round;
+}
+
+.circular-progress circle.bg {
+    stroke: #ddd;
+}
+
+.circular-progress circle.fg {
+    transform: rotate(-90deg);
+    transform-origin: var(--half-size) var(--half-size);
+    stroke-dasharray: var(--dash) calc(var(--circumference) - var(--dash));
+    transition: stroke-dasharray 0.3s linear 0s;
+    stroke: theme("colors.yellow-nine");
+}
+
+/* @property --progress {
+    syntax: "<number>";
+    inherits: false;
+    initial-value: 0;
+}
+
+@keyframes progress-animation {
+    from {
+        --progress: 0;
+    }
+    to {
+        --progress: var(--level);
+    }
+} */

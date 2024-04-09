@@ -43,7 +43,5 @@ module.exports = {
       }
     },
   },
-  plugins: [
-    require('tailwindcss-animatecss'),
-  ],
+  plugins: [],
 }
