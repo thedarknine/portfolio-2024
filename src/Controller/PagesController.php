@@ -81,7 +81,7 @@ class PagesController extends AbstractController
         $arcadeTypesList = $arcadeTypeRepository->getArcadeTypes();
         $arcadeList = [];
 
-        /*  foreach ($arcadeTypesList as $type) {
+        foreach ($arcadeTypesList as $type) {
               $arcadeList[$type->getLabel()] = [];
 
               $finder = new Finder();
@@ -89,7 +89,7 @@ class PagesController extends AbstractController
               foreach ($finder as $file) {
                   $arcadeList[$type->getLabel()][] = $file->getFileName();
               }
-          }*/
+          }
 
         $data['arcadeTypesList'] = $arcadeTypesList;
         $data['arcadeList'] = $arcadeList;
@@ -106,7 +106,7 @@ class PagesController extends AbstractController
         $creationTypesList = $creationTypeRepository->getCreationTypes();
 
         $creationsList = [];
-        /*foreach ($creationTypesList as $type) {
+        foreach ($creationTypesList as $type) {
             $creationsList[$type->getLabel()] = [];
 
             $finder = new Finder();
@@ -115,7 +115,7 @@ class PagesController extends AbstractController
                 $creationsList[$type->getLabel()][] = $file->getFileName();
             }
             shuffle($creationsList[$type->getLabel()]);
-        }*/
+        }
 
         $data['creationTypesList'] = $creationTypesList;
         $data['creationsList'] = $creationsList;
@@ -132,7 +132,7 @@ class PagesController extends AbstractController
         $photoTypesList = $photoTypeRepository->getPhotoTypes();
 
         $photosList = [];
-        /*foreach ($photoTypesList as $type) {
+        foreach ($photoTypesList as $type) {
             $photosList[$type->getLabel()] = [];
 
             $finder = new Finder();
@@ -149,7 +149,7 @@ class PagesController extends AbstractController
                 ];
             }
             shuffle($photosList[$type->getLabel()]);
-        }*/
+        }
 
         $data['photoTypesList'] = $photoTypesList;
         $data['photosList'] = $photosList;
