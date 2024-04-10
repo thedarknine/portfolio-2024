@@ -25,7 +25,9 @@
             <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 {% for arcade in listItemsArcade %}
                     <div class="shadow-lg mb-4">
-                        <img src="{{ absolute_url('images/arcade/final/' ~ arcade) }}" alt="" class="rounded" />
+                        <a href="{{ absolute_url('images/arcade/final/' ~ arcade) }}" class="glightbox9" data-gallery="gallery-final">
+                            <img src="{{ absolute_url('images/arcade/final/' ~ arcade) }}" alt="" class="rounded" />
+                        </a>
                     </div>
                 {% endfor %}
             </div>
@@ -44,7 +46,11 @@
             <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 {% for arcade in listItemsArcade %}
                     <div class="shadow-lg mb-4">
-                        <div><img src="{{ absolute_url('images/arcade/at-the-beginning/' ~ arcade) }}" alt="" class="rounded"></div>
+                        <div>
+                            <a href="{{ absolute_url('images/arcade/at-the-beginning/' ~ arcade) }}" class="glightbox9" data-gallery="gallery-beginning">
+                                <img src="{{ absolute_url('images/arcade/at-the-beginning/' ~ arcade) }}" alt="" class="rounded">
+                            </a>
+                        </div>
                     </div>
                 {% endfor %}
             </div>
@@ -61,7 +67,11 @@
             <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 {% for arcade in listItemsArcade %}
                     <div class="shadow-lg mb-4">
-                        <div><img src="{{ absolute_url('images/arcade/side-panels/' ~ arcade) }}" alt="" class="rounded"></div>
+                        <div>
+                            <a href="{{ absolute_url('images/arcade/side-panels/' ~ arcade) }}" class="glightbox9" data-gallery="gallery-side">
+                                <img src="{{ absolute_url('images/arcade/side-panels/' ~ arcade) }}" alt="" class="rounded">
+                            </a>
+                        </div>
                     </div>
                 {% endfor %}
             </div>
@@ -71,7 +81,11 @@
             <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 {% for arcade in listItemsArcade %}
                     <div class="shadow-lg mb-4">
-                        <div><img src="{{ absolute_url('images/arcade/control-panel/' ~ arcade) }}" alt="" class="rounded"></div>
+                        <div>
+                            <a href="{{ absolute_url('images/arcade/control-panel/' ~ arcade) }}" class="glightbox9" data-gallery="gallery-control">
+                                <img src="{{ absolute_url('images/arcade/control-panel/' ~ arcade) }}" alt="" class="rounded">
+                            </a>
+                        </div>
                     </div>
                 {% endfor %}
             </div>
@@ -81,7 +95,11 @@
             <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 {% for arcade in listItemsArcade %}
                     <div class="shadow-lg mb-4">
-                        <div><img src="{{ absolute_url('images/arcade/upper-part/' ~ arcade) }}" alt="" class="rounded"></div>
+                        <div>
+                            <a href="{{ absolute_url('images/arcade/upper-part/' ~ arcade) }}" class="glightbox9" data-gallery="gallery-upper">
+                                <img src="{{ absolute_url('images/arcade/upper-part/' ~ arcade) }}" alt="" class="rounded">
+                            </a>
+                        </div>
                     </div>
                 {% endfor %}
             </div>
@@ -91,7 +109,11 @@
             <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 {% for arcade in listItemsArcade %}
                     <div class="shadow-lg mb-4">
-                        <div><img src="{{ absolute_url('images/arcade/back-side/' ~ arcade) }}" alt="" class="rounded"></div>
+                        <div>
+                            <a href="{{ absolute_url('images/arcade/back-side/' ~ arcade) }}" class="glightbox9" data-gallery="gallery-back">
+                                <img src="{{ absolute_url('images/arcade/back-side/' ~ arcade) }}" alt="" class="rounded">
+                            </a>
+                        </div>
                     </div>
                 {% endfor %}
             </div>
@@ -107,7 +129,11 @@
             <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 {% for arcade in listItemsArcade %}
                     <div class="shadow-lg mb-4">
-                        <div><img src="{{ absolute_url('images/arcade/assembling/' ~ arcade) }}" alt="" class="rounded"></div>
+                        <div>
+                            <a href="{{ absolute_url('images/arcade/assembling/' ~ arcade) }}" class="glightbox9" data-gallery="gallery-assembling">
+                                <img src="{{ absolute_url('images/arcade/assembling/' ~ arcade) }}" alt="" class="rounded">
+                            </a>
+                        </div>
                     </div>
                 {% endfor %}
             </div>
@@ -124,7 +150,9 @@
             <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 {% for arcade in listItemsArcade %}
                     <div class="shadow-lg mb-4">
-                        <img src="{{ absolute_url('images/arcade/design/' ~ arcade) }}" alt="" class="rounded" />
+                        <a href="{{ absolute_url('images/arcade/design/' ~ arcade) }}" class="glightbox9" data-gallery="gallery-design">
+                            <img src="{{ absolute_url('images/arcade/design/' ~ arcade) }}" alt="" class="rounded" />
+                        </a>
                     </div>
                 {% endfor %}
             </div>
@@ -141,12 +169,15 @@
             <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 {% for arcade in listItemsArcade %}
                     <div class="shadow-lg mb-4">
-                        <div><img src="{{ absolute_url('images/arcade/recalbox/' ~ arcade) }}" alt="" class="rounded"></div>
+                        <div>
+                            <a href="{{ absolute_url('images/arcade/recalbox/' ~ arcade) }}" class="glightbox9" data-gallery="gallery-recalbox">
+                                <img src="{{ absolute_url('images/arcade/recalbox/' ~ arcade) }}" alt="" class="rounded">
+                            </a>
+                        </div>
                     </div>
                 {% endfor %}
             </div>
         </div>
     </section>
-    
 
 {% endblock %}

@@ -190,6 +190,10 @@ class Skill
             }
             $duration = $endYear - $this->startYear;
 
+            if ($duration <= 1) {
+                return strval($duration).' an';
+            }
+
             return strval($duration).' ans';
         }
     }

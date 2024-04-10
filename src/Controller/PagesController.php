@@ -82,14 +82,14 @@ class PagesController extends AbstractController
         $arcadeList = [];
 
         foreach ($arcadeTypesList as $type) {
-              $arcadeList[$type->getLabel()] = [];
+            $arcadeList[$type->getLabel()] = [];
 
-              $finder = new Finder();
-              $finder->in($this->getImagesDir().'arcade/'.$type->getLabel());
-              foreach ($finder as $file) {
-                  $arcadeList[$type->getLabel()][] = $file->getFileName();
-              }
-          }
+            $finder = new Finder();
+            $finder->in($this->getImagesDir().'arcade/'.$type->getLabel());
+            foreach ($finder as $file) {
+                $arcadeList[$type->getLabel()][] = $file->getFileName();
+            }
+        }
 
         $data['arcadeTypesList'] = $arcadeTypesList;
         $data['arcadeList'] = $arcadeList;

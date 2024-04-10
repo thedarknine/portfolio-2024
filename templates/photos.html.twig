@@ -15,7 +15,11 @@
             <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
                 {% for photo in listItemsPhotos %}
                     <div class="shadow-lg mb-4">
-                        <div><img src="{{ absolute_url('images/photos/' ~ type.label ~ '/' ~ photo.filename) }}" alt="" class="rounded"></div>
+                        <div>
+                            <a href="{{ absolute_url('images/photos/' ~ type.label ~ '/' ~ photo.filename) }}" class="glightbox9" data-gallery="gallery{{ type.id }}">
+                                <img src="{{ absolute_url('images/photos/' ~ type.label ~ '/' ~ photo.filename) }}" alt="" class="rounded">
+                            </a>
+                        </div>
                     </div>
                 {% endfor %}
             </div>

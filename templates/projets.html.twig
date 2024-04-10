@@ -11,7 +11,8 @@
         <section class="{% if loop.index is even %}bg-gray-light-nine{% else %}bg-white{% endif %} py-10">
             <div class="container flex w-full mt-0 lg:flex-row sm:mt-10 lg:mt-10">
                 <div class="flex flex-col sticky md:top-36 w-full max-w-md p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/4 wow animate__animated animate__fadeInLeft" data-wow-delay="0.6s">
-                    <h3 class="text-2xl text-turquoise font-semibold mb-6">{{ project.name }}</h3>
+                    <h3 class="text-2xl text-turquoise font-semibold mb-2">{{ project.name }}</h3>
+                    <h4 class="text-blue-nine text-xl mb-6">{{ project.period }}</h4>
                     <img src="{{ absolute_url('images/project/' ~ project.logo) }}" alt="{{ project.name }}" class="w-24 mx-auto">
                 </div>
 
@@ -25,8 +26,10 @@
                                 <div class="grid grid-cols-1 sm:grid-cols-2 sm:gap-x-8">
                                     {% for screenshot in screenshotsList %}
                                         <div class="relative flex flex-wrap shadow-lg rounded-xl bg-white mb-10">
-                                            <img class="rounded" src="{{ absolute_url('images/project/' ~ screenshot) }}" alt="{{ project.name }}" />
-                                        </div>    
+                                            <a href="{{ absolute_url('images/project/' ~ screenshot) }}" class="glightbox9" data-gallery="gallery{{ project.id }}">
+                                                <img class="rounded object-cover h-full" src="{{ absolute_url('images/project/' ~ screenshot) }}" alt="{{ project.name }}" />
+                                            </a>
+                                        </div>
                                     {% endfor %}
                                 </div>
                             </div>

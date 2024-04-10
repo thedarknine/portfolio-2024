@@ -10,6 +10,7 @@ import './styles/app.scss';
 
 import 'animate.css';
 const WOW = require('wowjs');
+import GLightbox from 'glightbox';
 
 // create global $ and jQuery variables
 global.$ = global.jQuery = $;
@@ -61,4 +62,18 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+
+    // Lightbox
+    const myLightbox = function () {
+        // GLightbox
+        const lightbox_class = document.querySelector(".glightbox9");
+        if ( lightbox_class != null) {
+            const lightbox = GLightbox({
+                selector: '.glightbox9',
+                touchNavigation: true,
+                loop: true
+            });
+        }
+    }
+    myLightbox();
 });

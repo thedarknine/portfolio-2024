@@ -10,15 +10,9 @@
     html {
       font-family: theme("fontFamily.normal");
       font-size: 14px;
-      color: theme("colors.blue-dark");
+      color: theme("colors.blue-medium");
     }
   }
-  
-.debug {
-  @apply border-2 border-solid;
-
-  border: theme("colors.red-nine") !important;
-}
 
 .gradient {
     background: linear-gradient(
@@ -173,6 +167,19 @@
 
 }
 
+.btn-nine {
+    @apply transform transition ease-in-out;
+
+    color: theme("colors.perfect") !important;
+
+    &:hover {
+        @apply scale-105 shadow-lg bg-blue-gray-400 p-2 rounded;
+
+        color: #fff;
+        text-decoration: none;
+    }
+}
+
 /* HOME */
 .home-area {
 	background: url("https://carolinenoyer.fr/images/volcans-cnoyer.png") no-repeat 50%;
@@ -198,6 +205,10 @@
             theme("colors.blue-dark") 100%
         );
     }
+}
+
+#about p strong {
+    @apply text-blue-nine;
 }
 
 .subtitle::after {
@@ -255,6 +266,12 @@
     color: theme("colors.turquoise");
     margin-right: 5px;
 }
+
+.bordered-grey {
+    margin: 10px 0 0 20px;
+    padding-left: 10px;
+    border-left: 3px solid theme("colors.blue-gray-400");
+  }
 
 /* Skills */
 .skill {
