@@ -9,7 +9,7 @@ cc:
 
 ## Build front-end
 build:
-	yarn build
+	pnpm install
 
 ## Build back-end
 build-php:
@@ -24,7 +24,7 @@ cs:
 
 ## Run dev front-end
 watch:
-	yarn encore dev --watch
+	pnpm encore dev --watch
 
 ## Update MySQL schema
 mysql-update:
