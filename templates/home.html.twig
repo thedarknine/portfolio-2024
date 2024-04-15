@@ -34,10 +34,10 @@
 
 <section id="about" class="bg-white py-10">
     <div class="container flex flex-wrap">
-        <div class="w-5/6 sm:w-1/3 p-6 wow animate__animated animate__zoomInUp" data-wow-delay="0.6s">
+        <div class="w-5/6 sm:w-1/3 p-6 wow animate__animated animate__zoomInUp animate__slow">
             <img src="{{ absolute_url('images/home/cnoyer.jpg') }}" alt="Caroline Noyer • Product Owner &amp; Développeur web senior" class="drop-shadow-xl rounded-full w-3/4 mx-auto mt-10 border-4">
         </div>
-        <div class="w-full sm:w-2/3 p-6 mt-10 wow animate__animated animate__zoomIn" data-wow-delay="0.6s">
+        <div class="w-full sm:w-2/3 p-6 mt-10 wow animate__animated animate__zoomIn animate__slow">
             <p class="mb-4">
                 Au cours des divers projets que j'ai menés, j’ai enrichi mon expertise
                 technique tout en élargissant mon éventail de compétences. Ceci me permet aujourd'hui de
@@ -270,7 +270,7 @@
     <div class="container relative px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
         <div class="relative mx-auto max-w-6xl">
         <div class="grid max-w-lg gap-9 mx-auto lg:grid-cols-3 lg:max-w-none">
-            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg border-b-8 border-b-yellow-nine wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg border-b-8 border-b-yellow-nine wow animate__animated animate__fadeInUp animate__slow" data-wow-delay="0.6s">
             <div class="flex-shrink-0">
                 <img class="object-cover w-full h-48" src="{{ absolute_url('images/home/experience.jpg') }}" alt="">
             </div>
@@ -288,7 +288,7 @@
                 </div>
             </div>
             </div>
-            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg border-b-8 border-b-yellow-nine wow animate__animated animate__fadeInUp" data-wow-delay="1.2s">
+            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg border-b-8 border-b-yellow-nine wow animate__animated animate__fadeInUp animate__slow" data-wow-delay="1.2s">
             <div class="flex-shrink-0">
                 <img class="object-cover w-full h-48" src="{{ absolute_url('images/home/competences.jpg') }}" alt="Compétences">
             </div>
@@ -306,7 +306,7 @@
                 </div>
             </div>
             </div>
-            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg border-b-8 border-b-yellow-nine wow animate__animated animate__fadeInUp" data-wow-delay="1.8s">
+            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg border-b-8 border-b-yellow-nine wow animate__animated animate__fadeInUp animate__slow" data-wow-delay="1.8s">
             <div class="flex-shrink-0">
                 <img class="object-cover w-full h-48" src="{{ absolute_url('images/home/centres-interet.jpg') }}" alt="Centres d'intérêt">
             </div>
@@ -333,5 +333,6 @@
 
 {% block javascripts %}
     {{ parent() }}
+    <script src="//unpkg.com/alpinejs" defer></script>
     {{ encore_entry_script_tags('home') }}
 {% endblock %}

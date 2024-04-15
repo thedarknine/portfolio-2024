@@ -5,5 +5,8 @@
       "files": ["assets/**/*.css", "assets/**/*.scss"],
       "customSyntax": "postcss-scss"
     }
-  ]
+  ],
+  "color-no-hex": [true, {
+    "message": "Don't use hex colors like \"%s\""
+  }]
 }

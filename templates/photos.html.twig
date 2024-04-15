@@ -16,7 +16,7 @@
                 {% for photo in listItemsPhotos %}
                     <div class="shadow-lg mb-4">
                         <div>
-                            <a href="{{ absolute_url('images/photos/' ~ type.label ~ '/' ~ photo.filename) }}" class="glightbox9" data-gallery="gallery{{ type.id }}">
+                            <a href="{{ absolute_url('images/photos/' ~ type.label ~ '/' ~ photo.filename) }}" class="glightbox9" data-gallery="gallery{{ type.id }}" data-title="{{ photo.caption }}" data-desc-position="right">
                                 <img src="{{ absolute_url('images/photos/' ~ type.label ~ '/' ~ photo.filename) }}" alt="" class="rounded">
                             </a>
                         </div>

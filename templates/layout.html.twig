@@ -1,19 +1,36 @@
 <!DOCTYPE html>
-<html>
+<html lang="fr">
     <head>
         <meta charset="UTF-8">
-        <title>Caroline Noyer | {% block title %}Product Owner{% endblock %}</title>
+        <title>Caroline Noyer — {% block title %}Product Owner{% endblock %}</title>
 
         <link rel="shortcut icon" type="image/x-icon" href="{{ absolute_url('images/global/favicon.ico') }}">
         <link rel="apple-touch-icon" sizes="180x180" href="{{ absolute_url('images/global/apple-touch-icon.png') }}">
         <link rel="icon" type="image/png" sizes="32x32" href="{{ absolute_url('images/global/favicon-32x32.png') }}">
         <link rel="icon" type="image/png" sizes="16x16" href="{{ absolute_url('images/global/favicon-16x16.png') }}">
 
+        <meta name="title" content="Caroline Noyer — Product Owner">
+        <meta name="description" content="Product owner depuis 4 ans sur des produits SaaS B2B, compétences UX et 12 ans de background technique dans le développement web. Dynamique, autonome et minutieuse.">
         <meta name="keywords" content="CV,Design,Product Owner,Développeur,Développeur web full-stack,PHP,Symfony">
         <meta name="author" content="Caroline Noyer">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index,follow">
         <meta name="googlebot" content="index,follow">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://carolinenoyer.fr/">
+        <meta property="og:title" content="Caroline Noyer — Product Owner">
+        <meta property="og:description" content="Product owner depuis 4 ans sur des produits SaaS B2B, compétences UX et 12 ans de background technique dans le développement web. Dynamique, autonome et minutieuse.">
+        <meta property="og:image" content="https://carolinenoyer.fr/images/cnoyer-product-owner.jpg">
+        <meta property="og:site_name" content="Caroline Noyer Online Portfolio">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:url" content="https://carolinenoyer.fr/">
+        <meta property="twitter:title" content="Caroline Noyer — Product Owner">
+        <meta property="twitter:description" content="Product owner depuis 4 ans sur des produits SaaS B2B, compétences UX et 12 ans de background technique dans le développement web. Dynamique, autonome et minutieuse.">
+        <meta property="twitter:image" content="https://carolinenoyer.fr/images/cnoyer-product-owner.jpg">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -31,7 +48,7 @@
                 <div class="container bg-transparent">
                     <nav class="bg-transparent flex justify-between items-center py-3">
                         <a class="text-3xl font-semibold leading-none" href="/">
-                            <img id="logo" class="h-10" src="https://medias.carolinenoyer.fr/images/logo-cnoyer-full-250{% if page == 'home' %}-white{% endif %}.svg" alt="">
+                            <img id="logo" class="h-10" src="https://medias.carolinenoyer.fr/images/logo-cnoyer-full-250-white.svg" alt="">
                         </a>
                         <ul class="hidden lg:flex lg:items-center lg:w-auto lg:space-x-5">
                             <li class="p-4 menu-item {% if page == "experience" %}active{% endif %}">
@@ -94,6 +111,12 @@
                             </li>
                             <li class="mb-1">
                                 <a class="block p-4 text-blueGray-500" href="/arcade">Arcade</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-blueGray-500" href="/creations">Créations</a>
+                            </li>
+                            <li class="mb-1">
+                                <a class="block p-4 text-blueGray-500" href="/photos">Photos</a>
                             </li>
                         </ul>
                     </div>
@@ -179,5 +202,22 @@
 
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
+
+        <!-- Matomo -->
+        <script>
+        var _paq = window._paq = window._paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function() {
+            var u="//analytics.carolinenoyer.fr/";
+            _paq.push(['setTrackerUrl', u+'matomo.php']);
+            _paq.push(['setSiteId', '1']);
+            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+        })();
+        </script>
+        <!-- End Matomo Code -->
+
     </body>
 </html>

@@ -9,9 +9,10 @@
 
     {% for project in data.projectsList %}
         <section class="{% if loop.index is even %}bg-gray-light-nine{% else %}bg-white{% endif %} py-10">
-            <div class="container flex w-full mt-0 lg:flex-row sm:mt-10 lg:mt-10">
+            <div class="container flex flex-col w-full mt-0 lg:flex-row sm:mt-10 lg:mt-10">
                 <div class="flex flex-col sticky md:top-36 w-full max-w-md p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/4 wow animate__animated animate__fadeInLeft" data-wow-delay="0.6s">
                     <h3 class="text-2xl text-turquoise font-semibold mb-2">{{ project.name }}</h3>
+                    <div class="line h-1"></div>
                     <h4 class="text-blue-nine text-xl mb-6">{{ project.period }}</h4>
                     <img src="{{ absolute_url('images/project/' ~ project.logo) }}" alt="{{ project.name }}" class="w-24 mx-auto">
                 </div>
