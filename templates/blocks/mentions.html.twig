@@ -1,0 +1,131 @@
+<!-- Modal Overlay -->
+<div x-show="open" class="fixed inset-0 px-2 z-10 overflow-hidden flex items-center justify-center">
+    <div x-show="open" x-transition:enter="transition-opacity ease-out duration-300" x-transition:enter-start="opacity-0" x-transition:enter-end="opacity-100" x-transition:leave="transition-opacity ease-in duration-300" x-transition:leave-start="opacity-100" x-transition:leave-end="opacity-0" class="absolute inset-0 bg-gray-500 bg-opacity-75 transition-opacity"></div>
+    <!-- Modal Content -->
+    <div x-show="open" x-transition:enter="transition-transform ease-out duration-300" x-transition:enter-start="transform scale-75" x-transition:enter-end="transform scale-100" x-transition:leave="transition-transform ease-in duration-300" x-transition:leave-start="transform scale-100" x-transition:leave-end="transform scale-75" class="bg-white rounded-md shadow-xl overflow-hidden max-w-md w-full sm:w-96 md:w-1/2 lg:w-2/3 xl:w-1/3 z-50">
+    <!-- Modal Header -->
+    <div class="bg-indigo-500 text-white px-4 py-2 flex justify-between">
+        <h2 class="text-lg font-semibold">Modal Title</h2>
+    </div>
+    <!-- Modal Body -->
+    <div class="p-4">
+        <p>This is the content of the modal. You can add any content here. Lorem ipsum dolor sit amet</p>
+    </div>
+    <!-- Modal Footer -->
+    <div class="border-t px-4 py-2 flex justify-end">
+        <button x-on:click="open = false" class="px-3 py-1 bg-indigo-500 text-white  rounded-md w-full sm:w-auto"> Fermer </button>
+    </div>
+    </div>
+</div>
+
+
+<div class="modal-content">
+        <h4 class="light-green-text text-darken-1">Mentions légales</h4>
+
+        <div class="brown-text">
+            <h3>1. Présentation du site.</h3>
+            <p>En vertu de l'article 6 de la loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique, il est précisé aux utilisateurs du site <a href="https://web.archive.org/web/20180307215558/http://www.carolinenoyer.info/">www.carolinenoyer.info</a> l'identité des différents intervenants dans le cadre de sa réalisation et de son suivi :</p>
+            <div>
+                <p class="mb0"><strong>Propriétaire</strong></p>
+                <p class="mt0">Caroline Noyer</p>
+                
+                <p class="mb0"><strong>Editeur de publication</strong></p>
+                <p class="mt0">Caroline Noyer</p>
+
+                <p class="mb0"><strong>Prestataire d'hébergement</strong></p>
+                <p class="mt0">Société OVH - 2 rue Kellermann - 59100 Roubaix - France</p>
+                
+                <p class="mb0"><strong>Crédits</strong></p>
+                <p class="mt0 mb0">Certaines icones proviennent de <a href="https://web.archive.org/web/20180307215558/http://www.freepik.com/" title="Freepik" target="_blank">Freepik</a> depuis <a href="https://web.archive.org/web/20180307215558/http://www.flaticon.com/" title="Flaticon">www.flaticon.com</a> sous licence <a href="https://web.archive.org/web/20180307215558/https://creativecommons.org/licenses/by/3.0/fr" title="Creative Commons BY 3.0" target="_blank">CC 3.0 BY</a></p>
+                <p class="mt0 mb0">Les illustrations de chacune des pages proviennent de <a href="https://web.archive.org/web/20180307215558/https://www.pexels.com/" title="Pexels" target="_blank">Pexels</a> sous licence <a href="https://web.archive.org/web/20180307215558/https://creativecommons.org/publicdomain/zero/1.0/deed.fr" title="Creative Commons Zero" target="_blank">CC0</a></p>
+                <p class="mt0 mb0">Les mentions légales ont été générées et offertes par Subdelirium <a target="_blank" href="https://web.archive.org/web/20180307215558/http://www.subdelirium.com/generateur-de-mentions-legales/">Générateur de mentions légales</a></p>
+                
+                <p class="mb0"><strong>Librairies utilisées</strong></p>
+                <div class="mt0">
+                    <ul class="ml2 mt0 browser-default">
+                                                    <li><a href="https://web.archive.org/web/20180307215558/http://materializecss.com/" title="Materialize" target="_blank">Materialize</a></li>
+                                                    <li><a href="https://web.archive.org/web/20180307215558/https://jquery.com/" title="jQuery" target="_blank">jQuery</a></li>
+                                                    <li><a href="https://web.archive.org/web/20180307215558/https://modernizr.com/" title="Modernizr" target="_blank">Modernizr</a></li>
+                                                    <li><a href="https://web.archive.org/web/20180307215558/https://daneden.github.io/animate.css/" title="Animate.css" target="_blank">Animate.css</a></li>
+                                                    <li><a href="https://web.archive.org/web/20180307215558/http://ianlunn.github.io/Hover/" title="Hover.css" target="_blank">Hover.css</a></li>
+                                                    <li><a href="https://web.archive.org/web/20180307215558/https://github.com/Xaxis/jquery.scrollfire" title="jquery.scrollfire" target="_blank">jquery.scrollfire</a></li>
+                                            </ul>
+                </div>
+            </div>
+            
+            <h3>2. Conditions générales d’utilisation du site et des services proposés.</h3>
+            <div>
+                <p class="mt0">L’utilisation du site <a href="https://web.archive.org/web/20180307215558/http://www.carolinenoyer.info/">www.carolinenoyer.info</a> implique l’acceptation pleine et entière des conditions générales d’utilisation ci-après décrites. Ces conditions d’utilisation sont susceptibles d’être modifiées ou complétées à tout moment, les utilisateurs du site <a href="https://web.archive.org/web/20180307215558/http://www.carolinenoyer.info/">www.carolinenoyer.info</a> sont donc invités à les consulter de manière régulière.</p>
+                <p class="mt0">Ce site est normalement accessible à tout moment aux utilisateurs. Une interruption pour raison de maintenance technique peut être toutefois décidée par Caroline Noyer, qui s’efforcera alors de communiquer préalablement aux utilisateurs les dates et heures de l’intervention.</p>
+                <p class="mt0">Le site <a href="https://web.archive.org/web/20180307215558/http://www.carolinenoyer.info/">www.carolinenoyer.info</a> est mis à jour régulièrement par Caroline Noyer. De la même façon, les mentions légales peuvent être modifiées à tout moment : elles s’imposent néanmoins à l’utilisateur qui est invité à s’y référer le plus souvent possible afin d’en prendre connaissance.</p>
+            </div>
+            
+            <h3>3. Description des services fournis.</h3>
+            <div>
+                <p class="mt0">Le site <a href="https://web.archive.org/web/20180307215558/http://www.carolinenoyer.info/">www.carolinenoyer.info</a> a pour objet de fournir une information concernant l’ensemble de ses activités.</p>
+                <p class="mt0">Caroline Noyer s’efforce de fournir sur le site <a href="https://web.archive.org/web/20180307215558/http://www.carolinenoyer.info/">www.carolinenoyer.info</a> des informations aussi précises que possible. Toutefois, il ne pourra être tenue responsable des omissions, des inexactitudes et des carences dans la mise à jour, qu’elles soient de son fait ou du fait des tiers partenaires qui lui fournissent ces informations.</p>
+                <p class="mt0">Tous les informations indiquées sur le site <a href="https://web.archive.org/web/20180307215558/http://www.carolinenoyer.info/">www.carolinenoyer.info</a> sont données à titre indicatif, et sont susceptibles d’évoluer. Par ailleurs, les renseignements figurant sur le site <a href="https://web.archive.org/web/20180307215558/http://www.carolinenoyer.info/">www.carolinenoyer.info</a> ne sont pas exhaustifs. Ils sont donnés sous réserve de modifications ayant été apportées depuis leur mise en ligne.</p>
+            </div>
+            
+            <h3>4. Limitations contractuelles sur les données techniques.</h3>
+            <div>
+                <p class="mt0">Le site utilise la technologie JavaScript.</p>
+                <p class="mt0">Le site Internet ne pourra être tenu responsable de dommages matériels liés à l’utilisation du site. De plus, l’utilisateur du site s’engage à accéder au site en utilisant un matériel récent, ne contenant pas de virus et avec un navigateur de dernière génération mis-à-jour.</p>
+            </div>
+            
+            <h3>5. Propriété intellectuelle et contrefaçons.</h3>
+            <div>
+                <p class="mt0">Caroline Noyer est propriétaire des droits de propriété intellectuelle ou détient les droits d’usage sur tous les éléments accessibles sur le site, notamment les textes, images, graphismes, logo, icônes, sons, logiciels.</p>
+                <p class="mt0">Toute reproduction, représentation, modification, publication, adaptation de tout ou partie des éléments du site, quel que soit le moyen ou le procédé utilisé, est interdite, sauf autorisation écrite préalable de : Caroline Noyer.</p>
+                <p class="mt0">Toute exploitation non autorisée du site ou de l’un quelconque des éléments qu’il contient sera considérée comme constitutive d’une contrefaçon et poursuivie conformément aux dispositions des articles L.335-2 et suivants du Code de Propriété Intellectuelle.</p>
+            </div>
+
+            <h3>6. Limitations de responsabilité.</h3>
+            <div>
+                <p>Caroline Noyer ne pourra être tenue responsable des dommages directs et indirects causés au matériel de l’utilisateur, lors de l’accès au site www.carolinenoyer.info, et résultant soit de l’utilisation d’un matériel ne répondant pas aux spécifications indiquées au point 4, soit de l’apparition d’un bug ou d’une incompatibilité.</p>
+                <p>Caroline Noyer ne pourra également être tenue responsable des dommages indirects (tels par exemple qu’une perte de marché ou perte d’une chance) consécutifs à l’utilisation du site <a href="https://web.archive.org/web/20180307215558/http://www.carolinenoyer.info/">www.carolinenoyer.info</a>.</p>
+                <p>Des espaces interactifs (possibilité de poser des questions dans l’espace contact) sont à la disposition des utilisateurs. Caroline Noyer se réserve le droit de supprimer, sans mise en demeure préalable, tout contenu déposé dans cet espace qui contreviendrait à la législation applicable en France, en particulier aux dispositions relatives à la protection des données. Le cas échéant, Caroline Noyer se réserve également la possibilité de mettre en cause la responsabilité civile et/ou pénale de l’utilisateur, notamment en cas de message à caractère raciste, injurieux, diffamant, ou pornographique, quel que soit le support utilisé (texte, photographie…).</p>
+            </div>
+
+            <h3>7. Gestion des données personnelles.</h3>
+            <div>
+                <p>En France, les données personnelles sont notamment protégées par la loi n° 78-87 du 6 janvier 1978, la loi n° 2004-801 du 6 août 2004, l'article L. 226-13 du Code pénal et la Directive Européenne du 24 octobre 1995.</p>
+                <p>A l'occasion de l'utilisation du site <a href="https://web.archive.org/web/20180307215558/http://www.carolinenoyer.info/">www.carolinenoyer.info</a>, peuvent êtres recueillies : l'URL des liens par l'intermédiaire desquels l'utilisateur a accédé au site <a href="https://web.archive.org/web/20180307215558/http://www.carolinenoyer.info/">www.carolinenoyer.info</a>, le fournisseur d'accès de l'utilisateur, l'adresse de protocole Internet (IP) de l'utilisateur.</p>
+                <p> En tout état de cause Caroline Noyer ne collecte des informations personnelles relatives à l'utilisateur que pour le besoin de certains services proposés par le site <a href="https://web.archive.org/web/20180307215558/http://www.carolinenoyer.info/">www.carolinenoyer.info</a>. L'utilisateur fournit ces informations en toute connaissance de cause, notamment lorsqu'il procède par lui-même à leur saisie. Il est alors précisé à l'utilisateur du site <a href="https://web.archive.org/web/20180307215558/http://www.carolinenoyer.info/">www.carolinenoyer.info</a> l’obligation ou non de fournir ces informations.</p>
+                <p>Conformément aux dispositions des articles 38 et suivants de la loi 78-17 du 6 janvier 1978 relative à l’informatique, aux fichiers et aux libertés, tout utilisateur dispose d’un droit d’accès, de rectification et d’opposition aux données personnelles le concernant, en effectuant sa demande écrite et signée, accompagnée d’une copie du titre d’identité avec signature du titulaire de la pièce, en précisant l’adresse à laquelle la réponse doit être envoyée.</p>
+                <p>Aucune information personnelle de l'utilisateur du site <a href="https://web.archive.org/web/20180307215558/http://www.carolinenoyer.info/">www.carolinenoyer.info</a> n'est publiée à l'insu de l'utilisateur, échangée, transférée, cédée ou vendue sur un support quelconque à des tiers. Seule l'hypothèse du rachat de Caroline Noyer et de ses droits permettrait la transmission des dites informations à l'éventuel acquéreur qui serait à son tour tenu de la même obligation de conservation et de modification des données vis à vis de l'utilisateur du site <a href="https://web.archive.org/web/20180307215558/http://www.carolinenoyer.info/">www.carolinenoyer.info</a>.</p>
+                <p>Le site n'est pas déclaré à la CNIL car il ne recueille pas d'informations personnelles.</p>
+                <p>Les bases de données sont protégées par les dispositions de la loi du 1er juillet 1998 transposant la directive 96/9 du 11 mars 1996 relative à la protection juridique des bases de données.</p>
+            </div>
+
+            <h3>8. Liens hypertextes et cookies.</h3>
+            <div>
+                <p>Le site <a href="https://web.archive.org/web/20180307215558/http://www.carolinenoyer.info/">www.carolinenoyer.info</a> contient un certain nombre de liens hypertextes vers d’autres sites, mis en place avec l’autorisation de Caroline Noyer. Cependant, Caroline Noyer n’a pas la possibilité de vérifier le contenu des sites ainsi visités, et n’assumera en conséquence aucune responsabilité de ce fait.</p>
+                <p>La navigation sur le site <a href="https://web.archive.org/web/20180307215558/http://www.carolinenoyer.info/">www.carolinenoyer.info</a> est susceptible de provoquer l’installation de cookie(s) sur l’ordinateur de l’utilisateur. Un cookie est un fichier de petite taille, qui ne permet pas l’identification de l’utilisateur, mais qui enregistre des informations relatives à la navigation d’un ordinateur sur un site. Les données ainsi obtenues visent à faciliter la navigation ultérieure sur le site, et ont également vocation à permettre diverses mesures de fréquentation.</p>
+                <p>Le refus d’installation d’un cookie peut entraîner l’impossibilité d’accéder à certains services. L’utilisateur peut toutefois configurer son ordinateur de la manière suivante, pour refuser l’installation des cookies :</p>
+                <p>Sous Internet Explorer : onglet outil (pictogramme en forme de rouage en haut a droite) / options internet. Cliquez sur Confidentialité et choisissez Bloquer tous les cookies. Validez sur Ok.</p>
+                <p>Sous Firefox : en haut de la fenêtre du navigateur, cliquez sur le bouton Firefox, puis aller dans l'onglet Options. Cliquer sur l'onglet Vie privée.
+                  Paramétrez les Règles de conservation sur :  utiliser les paramètres personnalisés pour l'historique. Enfin décochez-la pour  désactiver les cookies.</p>
+                <p>Sous Safari : Cliquez en haut à droite du navigateur sur le pictogramme de menu (symbolisé par un rouage). Sélectionnez Paramètres. Cliquez sur Afficher les paramètres avancés. Dans la section "Confidentialité", cliquez sur Paramètres de contenu. Dans la section "Cookies", vous pouvez bloquer les cookies.</p>
+                <p>Sous Chrome : Cliquez en haut à droite du navigateur sur le pictogramme de menu (symbolisé par trois lignes horizontales). Sélectionnez Paramètres. Cliquez sur Afficher les paramètres avancés. Dans la section "Confidentialité", cliquez sur préférences.  Dans l'onglet "Confidentialité", vous pouvez bloquer les cookies.</p>
+            </div>
+
+            <h3>9. Droit applicable et attribution de juridiction.</h3>
+            <div>
+                <p>Tout litige en relation avec l’utilisation du site <a href="https://web.archive.org/web/20180307215558/http://www.carolinenoyer.info/">www.carolinenoyer.info</a> est soumis au droit français. Il est fait attribution exclusive de juridiction aux tribunaux compétents de Paris.</p>
+            </div>
+
+            <h3>10. Les principales lois concernées.</h3>
+            <div>
+                <p>Loi n° 78-17 du 6 janvier 1978, notamment modifiée par la loi n° 2004-801 du 6 août 2004 relative à l'informatique, aux fichiers et aux libertés.</p>
+                <p> Loi n° 2004-575 du 21 juin 2004 pour la confiance dans l'économie numérique.</p>
+            </div>
+
+            <h3>11. Lexique.</h3>
+            <div>
+                <p>Utilisateur : Internaute se connectant, utilisant le site susnommé.</p>
+                <p>Informations personnelles : « les informations qui permettent, sous quelque forme que ce soit, directement ou non, l'identification des personnes physiques auxquelles elles s'appliquent » (article 4 de la loi n° 78-17 du 6 janvier 1978).</p>
+            </div>
+        </div>
+
+    </div>

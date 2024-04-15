@@ -10,6 +10,7 @@ import './styles/app.scss';
 
 import 'animate.css';
 const WOW = require('wowjs');
+import Swiper from 'swiper';
 import GLightbox from 'glightbox';
 
 // create global $ and jQuery variables
@@ -62,6 +63,15 @@ document.addEventListener('DOMContentLoaded', function() {
             });
         }
     }
+
+    // Swiper 
+    const swiper = new Swiper('.skills-carousel', {
+        spaceBetween: 64,
+        centeredSlides: true,
+        loop: true,
+        speed: 5000,
+        noSwiping: true,
+    });
 
     // Lightbox
     const myLightbox = function () {

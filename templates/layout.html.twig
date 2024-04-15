@@ -86,7 +86,7 @@
                 <div class="navbar-backdrop fixed inset-0 bg-blue-dark opacity-25"></div>
                 <nav class="fixed top-0 left-0 bottom-0 flex flex-col w-5/6 max-w-sm py-6 px-6 bg-white border-r overflow-y-auto transition duration-300">
                     <div class="flex items-center mb-8">
-                        <a class="mr-auto text-3xl font-semibold leading-none" href="https://wp.alithemes.com/html/monst/#">
+                        <a class="mr-auto text-3xl font-semibold leading-none" href="https://carolinenoyer.fr/">
                             <img class="h-10" src="https://medias.carolinenoyer.fr/images/logo-cnoyer-full-250.svg" alt="">
                         </a>
                         <button class="navbar-close">
@@ -120,21 +120,11 @@
                             </li>
                         </ul>
                     </div>
-                    <!--div class="mt-auto">
-                        <p class="my-4 text-xs text-blue-gray-400">
-                            <span>Get in Touch</span>
-                            <a class="text-blue-500 hover:text-blue-500 underline" href="https://wp.alithemes.com/html/monst/#">contact@monst.com</a>
-                        </p>
-                        <a class="inline-block px-1" href="https://wp.alithemes.com/html/monst/#">
-                            <img src="./Monst_Page_files/facebook-blue.svg" alt="">
-                        </a>
-                        <a class="inline-block px-1" href="https://wp.alithemes.com/html/monst/#">
-                            <img src="./Monst_Page_files/twitter-blue.svg" alt="">
-                        </a>
-                        <a class="inline-block px-1" href="https://wp.alithemes.com/html/monst/#">
-                            <img src="./Monst_Page_files/instagram-blue.svg" alt="">
-                        </a>
-                    </div-->
+                    <div class="mt-auto">
+                        <a class="inline-block px-1" href="https://www.linkedin.com/in/carolinenoyer" title="LinkedIn"><i class="text-2xl text-turquoise fa fa-linkedin"></i></a>
+                        <a class="inline-block px-1" href="https://instagram.com/caro.noyer/" title="Instagram"><i class="text-2xl text-turquoise fa-brands fa-instagram"></i></a>
+                        <a class="inline-block px-2" href="https://docs.carolinenoyer.fr/pdf/cv-cnoyer-productowner.pdf" title="CV format PDF"><i class="text-2xl text-turquoise fa fa-file-pdf"></i></a>
+                    </div>
                 </nav>
             </div>
 
@@ -154,7 +144,7 @@
                                 </p>
                             </div>
                             <div class="w-full lg:w-1/5 px-3 mb-6 lg:mb-0 wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
-                                <a class="inline-block mx-auto lg:mx-0 text-3xl font-semibold leading-none" href="https://wp.alithemes.com/html/monst/index.html">
+                                <a class="inline-block mx-auto lg:mx-0 text-3xl font-semibold leading-none" href="https://carolinenoyer.fr/">
                                     <img class="h-14 mx-auto" src="https://medias.carolinenoyer.fr/images/logo-2024-colored.png" alt="">
                                 </a>
                             </div>
@@ -177,7 +167,7 @@
                             </div>
                         </div>
                         <div class="flex flex-col lg:flex-row items-center lg:justify-between">
-                            <p class="text-xs text-blue-gray-400 wow animate__animated animate__fadeInUp" data-wow-delay="1.5s"><b>©Nine | Copyright</b> 2006-{{ "now"|date("Y") }}</p>
+                            <p class="text-xs text-blue-gray-400 wow animate__animated animate__fadeInUp" data-wow-delay="1.5s"><b>©Nine | Copyright</b> 2006-{{ "now"|date("Y") }} &bull; <a x-on:click="showPrivacyPolicy = true" class="" href="#"> View Privacy Policy </a></p>
                             <div class="order-first lg:order-last -mx-2 mb-4 lg:mb-0 wow animate__animated animate__fadeInUp" data-wow-delay="1.8s">
                                 <ul class="list-inline">
                                     <li class="list-inline-item"><a href="https://www.linkedin.com/in/carolinenoyer" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
@@ -194,6 +184,54 @@
             </footer>
         </div>
 
+        <div x-data="{ showPrivacyPolicy: false }" class"hidden">
+            
+            <!-- Privacy Policy Modal -->
+            <div x-show="showPrivacyPolicy" class="fixed z-10 inset-0 flex items-center justify-center">
+            <div class="absolute inset-0 bg-gray-500 opacity-75"></div>
+            <div class="relative bg-white rounded-lg overflow-hidden shadow-xl max-w-screen-md w-full m-4" x-transition:enter="transition ease-out duration-300 transform opacity-0 scale-95" x-transition:enter-start="opacity-0 scale-95" x-transition:enter-end="opacity-100 scale-100" x-transition:leave="transition ease-in duration-200 transform opacity-100 scale-100" x-transition:leave-start="opacity-100 scale-100" x-transition:leave-end="opacity-0 scale-95" x-cloak>
+                <!-- Modal panel -->
+                <div class="px-6 py-4">
+                <h3 class="text-lg leading-6 font-medium text-gray-900"> Privacy Policy </h3>
+                </div>
+                <div class="prose max-w-screen-md p-6 overflow-y-auto" style="max-height: 70vh; background-color: #fff; border: 1px solid #e2e8f0; border-radius: 0.375rem; box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.1);">
+                <h2 class="text-2xl font-bold mb-4">Privacy Policy</h2>
+                <p class="mb-4">This Privacy Policy describes how we collect, use, and disclose information that we obtain through our website and services.</p>
+                <h3 class="text-lg font-semibold mb-2">Information We Collect</h3>
+                <p>We may collect the following types of information:</p>
+                <ul class="list-disc ml-6 mb-4">
+                    <li>Personal Information: We may collect your name, email address, and other personal information when you provide it to us.</li>
+                    <li>Usage Information: We may collect information about your usage of our website and services, such as the pages you visit and your interactions with our content.</li>
+                </ul>
+                <h3 class="text-lg font-semibold mb-2">How We Use Your Information</h3>
+                <p>We may use your information for various purposes, including:</p>
+                <ul class="list-disc ml-6 mb-4">
+                    <li>Providing our services to you</li>
+                    <li>Sending you updates and information about our products and services</li>
+                    <li>Improving our website and services</li>
+                </ul>
+                <h3 class="text-lg font-semibold mb-2">Disclosure of Your Information</h3>
+                <p>We may disclose your information to third parties in certain circumstances, including:</p>
+                <ul class="list-disc ml-6 mb-4">
+                    <li>With your consent</li>
+                    <li>When required by law</li>
+                    <li>With service providers and partners who assist us in delivering our services</li>
+                </ul>
+                <h3 class="text-lg font-semibold mb-2">Security</h3>
+                <p>We take reasonable measures to protect your information, but no method of transmission over the internet is 100% secure. We cannot guarantee the security of your information.</p>
+                <h3 class="text-lg font-semibold mb-2">Changes to this Privacy Policy</h3>
+                <p>We may update this Privacy Policy from time to time. Any changes will be posted on our website. By continuing to use our services, you agree to the updated Privacy Policy.</p>
+                <p class="mt-4">
+                    <a href="/privacy-policy" class="text-blue-500 hover:underline">Read our full Privacy Policy</a>.
+                </p>
+                </div>
+                <div class="bg-gray-50 px-4 py-3 sm:px-6 flex align-items justify-end p-4 gap-4 flex-row">
+                <button x-on:click="showPrivacyPolicy = false" type="button" class="inline-flex justify-center rounded-md border border-transparent shadow-sm px-4 py-2 bg-turquoise text-base font-medium text-white focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400  sm:w-auto sm:text-sm"> Fermer </button>
+                </div>
+            </div>
+            </div>
+        </div>
+
         {% block javascripts %}
             <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
             <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
@@ -202,6 +240,28 @@
 
             {{ encore_entry_script_tags('app') }}
         {% endblock %}
+
+        <script type='text/javascript'>
+            // Some default pre init
+            var Countly = Countly || {};
+            Countly.q = Countly.q || [];
+
+            Countly.app_key = "f18d89edd54dd15a7c1aeaafa1c81559a0efba0e";
+            Countly.url = "https://portfolio-ffed4888b39b1.flex.countly.com";
+
+            Countly.q.push(['track_sessions']);
+            Countly.q.push(['track_pageview']);
+
+            // Load Countly script asynchronously
+            (function() {
+            var cly = document.createElement('script'); cly.type = 'text/javascript';
+            cly.async = true;
+            // Enter URL of script here (see below for other option)
+            cly.src = 'https://cdn.jsdelivr.net/npm/countly-sdk-web@latest/lib/countly.min.js';
+            cly.onload = function(){Countly.init()};
+            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
+            })();
+        </script>
 
         <!-- Matomo -->
         <script>
