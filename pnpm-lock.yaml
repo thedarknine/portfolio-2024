@@ -49,6 +49,9 @@ devDependencies:
   '@symfony/webpack-encore':
     specifier: ^4.6.1
     version: 4.6.1(@babel/core@7.24.4)(@babel/preset-env@7.24.4)(@symfony/stimulus-bridge@3.2.2)(postcss-loader@7.3.4)(postcss@8.4.38)(sass-loader@14.1.1)(sass@1.74.1)(webpack-cli@4.10.0)(webpack-notifier@1.15.0)(webpack@5.91.0)
+  '@tailwindcss/forms':
+    specifier: ^0.5.7
+    version: 0.5.7(tailwindcss@3.4.3)
   autoprefixer:
     specifier: ^10.4.19
     version: 10.4.19(postcss@8.4.38)
@@ -1597,6 +1600,15 @@ packages:
       - supports-color
       - uglify-js
       - utf-8-validate
+    dev: true
+
+  /@tailwindcss/forms@0.5.7(tailwindcss@3.4.3):
+    resolution: {integrity: sha512-QE7X69iQI+ZXwldE+rzasvbJiyV/ju1FGHH0Qn2W3FKbuYtqp8LKcy6iSw79fVUT5/Vvf+0XgLCeYVG+UV6hOw==}
+    peerDependencies:
+      tailwindcss: '>=3.0.0 || >= 3.0.0-alpha.1'
+    dependencies:
+      mini-svg-data-uri: 1.4.4
+      tailwindcss: 3.4.3
     dev: true
 
   /@trysound/sax@0.2.0:
@@ -3935,6 +3947,11 @@ packages:
       schema-utils: 4.2.0
       tapable: 2.2.1
       webpack: 5.91.0(webpack-cli@4.10.0)
+    dev: true
+
+  /mini-svg-data-uri@1.4.4:
+    resolution: {integrity: sha512-r9deDe9p5FJUPZAk3A59wGH7Ii9YrjjWw0jmw/liSbHl2CHiyXj6FcDXDu2K3TjVAXqiJdaw3xxwlZZr9E6nHg==}
+    hasBin: true
     dev: true
 
   /minimalistic-assert@1.0.1:
