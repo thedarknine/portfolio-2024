@@ -1,0 +1,337 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Product Owner{% endblock %}
+
+{% block body %}
+<!--Hero-->
+<section class="home-area -mt-24 pt-24 static">
+    <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-2 lg:gap-x-8">
+        <div class="md:pt-12">
+            <img class="lg:h-80 h-40 mx-auto jump rounded wow animate__animated animate__fadeInUp" data-wow-delay="1s" src="https://carolinenoyer.fr/images/logo-nine-2021.png" alt="">
+        </div>
+        <div class="mb-16 mt-12 lg:mt-32 xl:mt-40 xl:mr-12">
+            <div class="max-w-2xl mx-auto mb-8">
+                <h2 class="text-3xl text-white lg:text-5xl lg:leading-normal mb-4 font-bold font-heading wow animate__animated animate__fadeIn" data-wow-delay="0.5s">Passionnée par le <span class="text-turquoise">digital</span> depuis 2005</h2>
+                <p class="text-blue-gray-400 text-xl leading-relaxed wow animate__animated animate__fadeIn" data-wow-delay="1s" ><strong class="text-blue-500">Expérience</strong> en <span id="typedtext" class="text-white typewrite d-inline text-brand"></span></p>
+            </div>
+            <div class="max-w-2xl mx-auto">
+                <span class="text-center inline-flex items-center justify-center w-12 h-12 p-3 mb-5 mr-3 btn-social wow animate__animated animate__bounceInRight" data-wow-delay="1.5s">
+                    <a href="https://www.linkedin.com/in/carolinenoyer" title="LinkedIn" class="text-2xl"><i class="fa fa-linkedin"></i></a>
+                </span>
+                <span class="text-center inline-flex items-center justify-center w-12 h-12 p-3 mb-5 mr-3 btn-social wow animate__animated animate__bounceInRight" data-wow-delay="2s">
+                    <a href="https://instagram.com/caro.noyer/" title="Instagram" class="text-2xl"><i class="fa-brands fa-instagram"></i></a>
+                </span>
+                <span class="text-center inline-flex items-center justify-center w-12 h-12 p-3 mb-5 mr-3 btn-social wow animate__animated animate__bounceInRight" data-wow-delay="2.5s">
+                    <a href="https://docs.carolinenoyer.fr/pdf/cv-cnoyer-productowner.pdf" title="CV format PDF" class="text-2xl"><i class="fa fa-file-pdf"></i></a>
+                </span>
+            </div>
+        </div>
+    </div> <!-- end of container -->
+</section>
+<div class="relative bottom-0">
+    <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-0 w-full block" viewBox="0 0 1440 320" style="height:140px;top:-139px" preserveAspectRatio="none"><path class="fill-white" fill-opacity="1" d="M 0 288 L 80 288 C 160 288 320 288 480 245.3 C 640 203 800 117 960 96 C 1120 75 1280 117 1360 138.7 L 1440 160 L 1440 320 L 0 320 Z"></path></svg>
+</div>
+
+<section id="about" class="bg-white py-10">
+    <div class="container flex flex-wrap">
+        <div class="w-5/6 sm:w-1/3 p-6 wow animate__animated animate__zoomInUp" data-wow-delay="0.6s">
+            <img src="{{ absolute_url('images/home/cnoyer.jpg') }}" alt="Caroline Noyer • Product Owner &amp; Développeur web senior" class="drop-shadow-xl rounded-full w-3/4 mx-auto mt-10 border-4">
+        </div>
+        <div class="w-full sm:w-2/3 p-6 mt-10 wow animate__animated animate__zoomIn" data-wow-delay="0.6s">
+            <p class="mb-4">
+                Au cours des divers projets que j'ai menés, j’ai enrichi mon expertise
+                technique tout en élargissant mon éventail de compétences. Ceci me permet aujourd'hui de
+                disposer de <strong>solides bases</strong> autant en Front-end qu'en Back-end. C’est ainsi
+                que j’ai rejoint l’équipe R&amp;D de Coffreo en 2017 en qualité de <strong>développeur PHP
+                senior</strong>.
+            </p>
+
+            <p class="mb-4">
+                <strong>Empathique</strong>, je m’intègre aisément au sein d’un groupe. La
+                valeur du <strong>collectif</strong> et l’<strong>esprit d’équipe</strong> sont primordiaux,
+                lorsque je suis en confiance, c’est avec plaisir que je fais en sorte de renforcer la
+                <strong>cohésion</strong> et pourquoi pas avec quelques touches d’humour !
+            </p>
+
+            <p class="mb-4">
+                Ayant une appétence pour la coordination et la gestion de projets, j’ai évolué
+                fin 2019 sur un poste de <strong>Product Owner</strong>, me permettant d’allier mes
+                connaissances techniques, mon envie de dynamiser une équipe et d’élaborer une vision Produit.
+            </p>
+
+            <p class="mb-4">
+                Mon parcours professionnel a affiné ma sensibilité visuelle que ce soit au
+                niveau de l’aspect graphique ou de l’<strong>expérience utilisateur</strong>.
+                <strong>Motivée</strong> par l’envie de me dépasser, voire même de me surprendre, j’ai voulu
+                donner un sens à ce que je faisais et j’ai alors suivi une formation de <strong>Product
+                Designer</strong> pour mettre mes compétences au service des utilisateurs.
+            </p>
+
+            <p class="mb-4">
+                <strong>Curieuse</strong> de nature, je m’intéresse à des sujets variés et
+                aime apprendre de nouvelles choses, notamment dans le domaine de l’<strong>amélioration de
+                soi</strong> et de la qualité de vie. Apprendre des autres mais également apprendre de soi :
+                c’est un vrai défi qui demande de l’<strong>ouverture d’esprit</strong>.
+            </p>
+
+            <p class="mb-4">
+                <strong>Dynamique</strong> et motivée par l’envie d’évoluer, je prends plaisir
+                à relever de nouveaux challenges me permettant de m’épanouir.
+            </p>
+        </div>
+    </div>
+</section>
+
+<section class="bg-blue-medium text-white py-10">
+    <div class="flex flex-wrap items-center">
+        <div class="w-full md:w-3/12 px-12 md:px-4 ml-auto mr-auto mt-10 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
+            <div class="skill-picto"><i class="fas fa-seedling"></i></div>
+            <h3 class="skill-title">{{ data.nbYearsExperience }} ans d'expérience</h3>
+            <div class="block pb-6 text-center">
+                <span class="skill-item last:mr-0">Dév</span>
+                <span class="skill-item last:mr-0">SaaS</span>
+                <span class="skill-item last:mr-0">B2B</span>
+                <span class="skill-item last:mr-0">Santé</span>
+                <span class="skill-item last:mr-0">RH</span>
+                <span class="skill-item last:mr-0">Sémantique</span>
+            </div>
+        </div>
+
+        <div class="w-full md:w-3/12 px-12 md:px-4 ml-auto mr-auto mt-10 wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+            <div class="skill-picto"><i class="fas fa-code"></i></div>
+            <h3 class="skill-title">Développement</h3>
+            <div class="block pb-6 text-center">
+                <span class="skill-item last:mr-0">PHP</span>
+                <span class="skill-item last:mr-0">Symfony</span>
+                <span class="skill-item last:mr-0">MySQL</span>
+                <span class="skill-item last:mr-0">MongoDB</span>
+                <span class="skill-item last:mr-0">API</span>
+                <span class="skill-item last:mr-0">Python</span>
+            </div>
+        </div>
+        <div class="w-full md:w-3/12 px-12 md:px-4 ml-auto mr-auto mt-10 wow animate__animated animate__fadeInUp" data-wow-delay="0.9s">
+            <div class="skill-picto"><i class="fas fa-pencil-ruler"></i></div>
+            <h3 class="skill-title">Web design</h3>
+            <div class="block pb-6 text-center">
+                <span class="skill-item last:mr-0">UX/UI</span>
+                <span class="skill-item last:mr-0">Prototype</span>
+                <span class="skill-item last:mr-0">Figma</span>
+                <span class="skill-item last:mr-0">Illustrator</span>
+                <span class="skill-item last:mr-0">Veille</span>
+            </div>
+        </div>
+        <div class="w-full md:w-3/12 px-12 md:px-4 ml-auto mr-auto mt-10 wow animate__animated animate__fadeInUp" data-wow-delay="1.2s">
+            <div class="skill-picto"><i class="fas fa-tasks"></i></div>
+            <h3 class="skill-title">Produit</h3>
+            <div class="block pb-6 text-center">
+                <span class="skill-item last:mr-0">Agile</span>
+                <span class="skill-item last:mr-0">Scrum</span>
+                <span class="skill-item last:mr-0">Equipe</span>
+                <span class="skill-item last:mr-0">Jira</span>
+                <span class="skill-item last:mr-0">Roadmap</span>
+                <span class="skill-item last:mr-0">Delivery</span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="experience" class="bg-white py-10">
+    <div class="wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+        <h1 class="w-full my-2 text-5xl font-bold leading-tight text-center text-gray-800">
+            Dernières expériences
+        </h1>
+        <div class="w-full mb-10">
+            <div class="h-1 mx-auto gradient w-64 opacity-25 my-0 py-0 rounded-t"></div>
+        </div>
+    </div>
+
+    <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12 text-blue-dark pb-24">
+        <div class="lg:col-span-5">
+            <div class="mb-16 lg:mb-0 xl:mt-16 wow animate__animated animate__fadeInLeft">
+                <div class="w-10/12 sm:w-12/12 mx-auto">
+                    <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-perfect">
+                        <img alt="..." src="{{ absolute_url('images/home/header-perfect.jpeg') }}" class="w-full align-middle rounded-t-lg">
+                        <blockquote class="relative p-8 mb-4">
+                            <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" class="absolute left-0 w-full block" style="height:95px;top:-94px"><polygon points="-30,95 583,95 583,65" class="fill-perfect"></polygon></svg>
+                            <h4 class="text-xl font-bold text-white">Product Owner</h4>
+                            <h5 class="mb-8 font-semibold text-white/70">Encadrement R&amp;D et qualité Produit</h5>
+                            <p class="text-md font-light mt-2 text-white">Perfect Memory est un fournisseur d'IA sémantique, ces technologies qui permettent de donner du sens et de la valeur à toutes les données générées par une organisation.  </p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lg:col-span-7">
+            <div class="sm:px-8 grid grid-cols-12 lg:gap-x-12">
+                <div class="col-span-6">
+                    <div class="px-4 py-5 wow animate__animated animate__fadeInRight" data-wow-delay="0.3s">
+                        <div class="text-turquoise p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"><i class="fa-solid fa-people-group"></i></div>
+                        <h6 class="text-xl mb-1 font-semibold text-perfect">Gestion équipe</h6>
+                        <p class="mb-4">Charnière entre les équipes de développement, l'équipe design et l'équipe qualité</p>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                    <div class="px-4 py-5 wow animate__animated animate__fadeInRight" data-wow-delay="0.6s">
+                        <div class="text-turquoise p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"><i class="fa-solid fa-list-check"></i></div>
+                        <h6 class="text-xl mb-1 font-semibold text-perfect">Gestion produit</h6>
+                        <p class="mb-4">Rédaction des expressions de besoin et spécifications fonctionnelles</p>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                    <div class="px-4 py-5 wow animate__animated animate__fadeInRight" data-wow-delay="0.9s">
+                        <div class="text-turquoise p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"><i class="fa-solid fa-ranking-star"></i></div>
+                        <h6 class="text-xl mb-1 font-semibold text-perfect">Amélioration</h6>
+                        <p class="mb-4">Mise en place d’un outil de discovery et priorisation<br /> <em>Jira Product Discovery</em></p>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                    <div class="px-4 py-5 wow animate__animated animate__fadeInRight" data-wow-delay="1.2s">
+                        <div class="text-turquoise p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"><i class="fa-solid fa-book"></i></div>
+                        <h6 class="text-xl mb-1 font-semibold text-perfect">Documentation</h6>
+                        <p class="mb-4">Rédaction du référentiel de fonctionnalités disponibles dans les différentes briques produit</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container px-4 sm:px-8 lg:grid lg:grid-cols-12 lg:gap-x-12 text-blue-dark">
+        <div class="lg:col-span-5 ">
+            <div class="mb-16 lg:mb-0 xl:mt-16 wow animate__animated animate__fadeInLeft">
+                <div class="w-10/12 sm:w-12/12 mx-auto">
+                    <div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded-lg bg-coffreo">
+                        <img alt="..." src="{{ absolute_url('images/home/header-coffreo.png') }}" class="w-full align-middle rounded-t-lg">
+                        <blockquote class="relative p-8 mb-4">
+                            <svg preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 583 95" class="absolute left-0 w-full block" style="height:95px;top:-94px"><polygon points="-30,95 583,95 583,65" class="fill-coffreo"></polygon></svg>
+                            <h4 class="text-xl font-bold text-white">Product Owner</h4>
+                            <h5 class="mb-8 font-semibold text-white/70">Coordination des développements</h5>
+                            <p class="text-md font-light mt-2 text-white">Au coeur de la transformation digitale RH, Coffreo a créé une plateforme SaaS pour accélérer et fluidifier les échanges entre les agences d’intérim, les prestataires de l’événementiel, les traiteurs, les sociétés de sécurité, les organismes médicaux, … et leurs salariés temporaires.</p>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="lg:col-span-7 ">
+            <div class="sm:px-8 grid grid-cols-12 lg:gap-x-12">
+                <div class="col-span-6">
+                    <div class="px-4 py-5 wow animate__animated animate__fadeInRight" data-wow-delay="0.3s">
+                        <div class="text-turquoise p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"><i class="fa-solid fa-people-group"></i></div>
+                        <h6 class="text-xl mb-1 font-semibold text-perfect">Gestion équipe</h6>
+                        <p class="mb-4">Charnière entre l’équipe technique, l’équipe marketing et les clients</p>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                    <div class="px-4 py-5 wow animate__animated animate__fadeInRight" data-wow-delay="0.6s">
+                        <div class="text-turquoise p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"><i class="fa-solid fa-list-check"></i></div>
+                        <h6 class="text-xl mb-1 font-semibold text-perfect">Gestion produit</h6>
+                        <p class="mb-4">Création et gestion du Product Backlog selon la méthodologie Agile (Scrum)</p>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                    <div class="px-4 py-5 wow animate__animated animate__fadeInRight" data-wow-delay="0.9s">
+                        <div class="text-turquoise p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"><i class="fa-solid fa-diagram-project"></i></div>
+                        <h6 class="text-xl mb-1 font-semibold text-perfect">Priorisation</h6>
+                        <p class="mb-4">Priorisation des besoins et exigences métier, entre la roadmap et les retours clients</p>
+                    </div>
+                </div>
+                <div class="col-span-6">
+                    <div class="px-4 py-5 wow animate__animated animate__fadeInRight" data-wow-delay="1.2s">
+                        <div class="text-turquoise p-3 text-center inline-flex items-center justify-center w-12 h-12 mb-5 shadow-lg rounded-full bg-white"><i class="fa-solid fa-truck"></i></div>
+                        <h6 class="text-xl mb-1 font-semibold text-perfect">Livraison</h6>
+                        <p class="mb-4">Suivi de l’avancement des projets, du planning de livraison et des engagements</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="text-center mt-10 "><a class="nine-btn-primary transform transition hover:scale-105 duration-300 ease-in-out" href="#"><span>En savoir plus</span></a></div>
+</section>
+
+<section id="paysage" class="bg-blue-medium text-white py-10">
+    <div class="container mx-auto py-8">
+        <div class="wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+            <h2 class="w-full my-2 text-4xl font-bold leading-tight text-center font-accent text-white">Moodboard</h2>
+            <div class="w-full mb-4">
+                <div class="h-1 mx-auto bg-light w-64 opacity-50 my-0 py-0 rounded-t"></div>
+            </div>
+        </div>
+        <div class="grid-cols-4 p-8 md:space-y-0 md:grid md:gap-3 md:grid-rows-2">
+            {% for landscape in data.mentalLandscape %}
+            <div class="w-full h-full rounded overflow-hidden {% if landscape.big %}col-span-2 row-span-2{% endif %} wow animate__animated animate__zoomIn" data-wow-delay="{{ loop.index * 0.4 }}s">
+                <img src="{{ absolute_url(landscape.image) }}" alt="{{ landscape.alt }}" class="block h-full w-full rounded-lg my-4 lg:my-0 object-cover object-center hover:scale-110 transition duration-500">
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<section id="competences" class="bg-white py-10">
+    <div class="container relative px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
+        <div class="relative mx-auto max-w-6xl">
+        <div class="grid max-w-lg gap-9 mx-auto lg:grid-cols-3 lg:max-w-none">
+            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg border-b-8 border-b-yellow-nine wow animate__animated animate__fadeInUp" data-wow-delay="0.6s">
+            <div class="flex-shrink-0">
+                <img class="object-cover w-full h-48" src="{{ absolute_url('images/home/experience.jpg') }}" alt="">
+            </div>
+            <div class="flex flex-col justify-between flex-1 p-6 bg-gray-nine/20">
+                <div class="flex-1">
+                <a href="#" class="block mt-2">
+                    <p class="text-xl font-semibold text-turquoise font-accent">Expérience</p>
+                    <p class="mt-3 text-base">Passionnée de nouvelles technologies depuis plus de 15 ans,
+                    dotée d'un profil expérimenté et polyvalent, je m'applique à analyser, développer,
+                    communiquer et proposer des solutions.</p>
+                </a>
+                </div>
+                <div class="text-right mt-20">
+                    <a href="/experience" class="nine-btn-primary transform transition hover:scale-105 duration-300 ease-in-out">Plus d'infos <i class="fas fa-angle-double-right ml-3"></i></a>
+                </div>
+            </div>
+            </div>
+            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg border-b-8 border-b-yellow-nine wow animate__animated animate__fadeInUp" data-wow-delay="1.2s">
+            <div class="flex-shrink-0">
+                <img class="object-cover w-full h-48" src="{{ absolute_url('images/home/competences.jpg') }}" alt="Compétences">
+            </div>
+            <div class="flex flex-col justify-between flex-1 p-6 bg-gray-nine/20">
+                <div class="flex-1">
+                <a href="#" class="block mt-2">
+                    <p class="text-xl font-semibold text-turquoise font-accent">Compétences</p>
+                    <p class="mt-3 text-base">Dans un souci de qualité, évolutivité, fiabilité, je m'efforce de
+                    respecter les standards mis en place à travers des outils éprouvés et n'ai de cesse de
+                    suivre leur évolution.</p>
+                </a>
+                </div>
+                <div class="text-right mt-20">
+                    <a href="/competences" class="nine-btn-primary transform transition hover:scale-105 duration-300 ease-in-out">Plus d'infos <i class="fas fa-angle-double-right ml-3"></i></a>
+                </div>
+            </div>
+            </div>
+            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg border-b-8 border-b-yellow-nine wow animate__animated animate__fadeInUp" data-wow-delay="1.8s">
+            <div class="flex-shrink-0">
+                <img class="object-cover w-full h-48" src="{{ absolute_url('images/home/centres-interet.jpg') }}" alt="Centres d'intérêt">
+            </div>
+            <div class="flex flex-col justify-between flex-1 p-6 bg-gray-nine/20">
+                <div class="flex-1">
+                <a href="#" class="block mt-2">
+                    <p class="text-xl font-semibold text-turquoise font-accent">Centres d'intérêt</p>
+                    <p class="mt-3 text-base">Mon goût pour les métiers d'art et la matière m'a mené vers l'un de mes
+                    loisirs : le modelage d'argile. La randonnée, quant à elle, me permet de profiter de la
+                    richesse de l'Auvergne.</p>
+                </a>
+                </div>
+                <div class="text-right mt-20">
+                    <a href="/creations" class="nine-btn-primary transform transition hover:scale-105 duration-300 ease-in-out">Plus d'infos <i class="fas fa-angle-double-right ml-3"></i></a>
+                </div>
+            </div>
+            </div>
+        </div>
+        </div>
+    </div>
+</section>
+
+{% endblock body %}
+
+{% block javascripts %}
+    {{ parent() }}
+    {{ encore_entry_script_tags('home') }}
+{% endblock %}

@@ -1,0 +1,29 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Photos{% endblock %}
+
+{% block body %}
+    <div class="pt-24">
+        {% embed "blocks/title.html.twig" with {'pagetitle': "Photos"} %}{% endembed %}
+    </div>
+
+    {% for type in data.photoTypesList %}
+    <section class="{% if loop.index is even %}bg-gray-light-nine{% else %}bg-white{% endif %} py-10">
+        <div class="container">
+            <h3 class="my-10 text-2xl font-accent font-semibold text-turquoise">{{ type.name }}</h3>
+            {% set listItemsPhotos = data.photosList[type.label] %}
+            <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
+                {% for photo in listItemsPhotos %}
+                    <div class="shadow-lg mb-4">
+                        <div>
+                            <a href="{{ absolute_url('images/photos/' ~ type.label ~ '/' ~ photo.filename) }}" class="glightbox9" data-gallery="gallery{{ type.id }}">
+                                <img src="{{ absolute_url('images/photos/' ~ type.label ~ '/' ~ photo.filename) }}" alt="" class="rounded">
+                            </a>
+                        </div>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+    {% endfor %}
+{% endblock %}

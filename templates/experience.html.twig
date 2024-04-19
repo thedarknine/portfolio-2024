@@ -1,0 +1,66 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Expérience{% endblock %}
+
+{% block body %}
+    <div class="pt-24">
+        {% embed "blocks/title.html.twig" with {'pagetitle': "Expériences professionnelles"} %}{% endembed %}
+    </div>
+
+    {% for experience in data.experiencesList %}
+        <section class="{% if loop.index is even %}bg-gray-light-nine{% else %}bg-white{% endif %} py-10">
+            <div class="container items-start flex flex-col w-full mt-0 lg:flex-row sm:mt-10">
+                <div class="sticky md:top-36 w-full max-w-md p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/4 wow animate__animated animate__fadeInLeft" data-wow-delay="0.6s">
+                    <div class="flex flex-col items-center w-full h-full mr-5 rounded-lg {% if loop.index is even %}bg-img-2{% else %}bg-img-1{% endif %}">
+                        <h2 class="text-2xl my-6 font-accent font-bold text-turquoise">{{ experience.startDate|date("Y") }}</h2>
+                        <h2 class="text-2xl my-4 font-accent font-semibold text-blue-medium text-center">{{ experience.title }}</h2>
+                        <img  class=" w-20 h-20" src="{{ absolute_url('images/company/' ~ experience.company.logo) }}" />
+                    </div>
+                </div>
+                <div class="w-full max-w-xl p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-3/4 wow animate__animated animate__fadeInRight" data-wow-delay="0.6s">
+                    <h4 class="font-accent font-semibold text-turquoise mb-4 text-xl">{{ experience.subtitle }}</h4>
+                    <p class="text-blue-gray-400"><i class="far fa-calendar-alt mr-1"></i>&nbsp;
+                                {% if experience.endDate is empty %}
+                                    Depuis {{ experience.startDate|date("m/Y") }}
+                                {% else %}
+                                    De {{ experience.startDate|date("m/Y") }} à {{ experience.endDate|date("m/Y") }}
+                                {% endif %}
+                                <i class="text-sm">(
+                                    {% if experience.duration.nbYears > 0 %}
+                                        {{ experience.duration.nbYears }}
+                                        an{% if experience.duration.nbYears > 1 %}s{% endif %}
+                                    {% endif %}
+                                    {% if experience.duration.nbMonths != 0 %}
+                                        {% if experience.duration.nbYears > 0 %}
+                                            et
+                                        {% endif %}
+                                        {{ experience.duration.nbMonths }} mois
+                                    {% endif %}
+                                    )</i>
+                            </p>
+                        <p class="mb-4 text-blue-gray-400">
+                            <i class="fas fa-map-marker-alt mr-1"></i> {{ experience.company.name }}
+                            - <span class="text-sm">{{ experience.company.city }} ({{ experience.company.department|format_number({min_integer_digit: 2}) }})</span>
+                        </p>
+                    <div class="">
+                        {{ experience.description|raw }}
+                    </div>
+
+                    {% if experience.skills is not empty %}
+                    <p class="pt-10 pb-4"><b class="">Stack utilisée</b></p>
+                    <div class="w-full inline-flex">
+                        <ul class="flex flex-wrap items-center justify-center md:justify-start [&_li]:mx-4 [&_img]:max-w-none">
+                            {% for skill in experience.skills %}
+                            <li>
+                                <img src="{{ absolute_url('images/skills/' ~ skill.logo) }}" alt="{{ skill.name }}" width="40px" class="mb-4" />
+                            </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                    {% endif %}
+                </div>
+            </div>
+        </section>
+    {% endfor %}
+
+{% endblock %}
