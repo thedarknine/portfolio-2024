@@ -32,58 +32,71 @@
     <svg xmlns="http://www.w3.org/2000/svg" class="absolute left-0 w-full block" viewBox="0 0 1440 320" style="height:140px;top:-139px" preserveAspectRatio="none"><path class="fill-white" fill-opacity="1" d="M 0 288 L 80 288 C 160 288 320 288 480 245.3 C 640 203 800 117 960 96 C 1120 75 1280 117 1360 138.7 L 1440 160 L 1440 320 L 0 320 Z"></path></svg>
 </div>
 
-<section id="about" class="bg-white py-10">
-    <div class="container flex flex-wrap">
-        <div class="w-5/6 sm:w-1/3 p-6 wow animate__animated animate__zoomInUp animate__slow">
-            <img src="{{ absolute_url('images/home/cnoyer.jpg') }}" alt="Caroline Noyer • Product Owner &amp; Développeur web senior" class="drop-shadow-xl rounded-full w-3/4 mx-auto mt-10 border-4">
+<section id="competences" class="bg-white py-10">
+    <div class="container relative px-4 py-12 sm:px-6 lg:py-16">
+        <div class="relative mx-auto max-w-6xl">
+        <div class="grid max-w-lg gap-9 mx-auto lg:grid-cols-3 lg:max-w-none">
+            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg border-b-8 border-b-yellow-nine wow animate__animated animate__fadeInUp animate__slow" data-wow-delay="0.6s">
+            <div class="flex-shrink-0">
+                <img class="object-cover w-full h-48" src="{{ absolute_url('images/home/experience.jpg') }}" alt="">
+            </div>
+            <div class="flex flex-col justify-between flex-1 p-6 bg-gray-nine/20">
+                <div class="flex-1">
+                <a href="#" class="block mt-2">
+                    <p class="text-xl font-semibold text-turquoise font-accent">Expérience</p>
+                    <p class="mt-3 text-base">Passionnée de nouvelles technologies depuis plus de 15 ans,
+                    dotée d'un profil expérimenté et polyvalent, je m'applique à analyser, développer,
+                    communiquer et proposer des solutions.</p>
+                </a>
+                </div>
+                <div class="text-right mt-20">
+                    <a href="/experience" class="nine-btn-primary transform transition hover:scale-105 duration-300 ease-in-out">Plus d'infos <i class="fas fa-angle-double-right ml-3"></i></a>
+                </div>
+            </div>
+            </div>
+            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg border-b-8 border-b-yellow-nine wow animate__animated animate__fadeInUp animate__slow" data-wow-delay="1.2s">
+            <div class="flex-shrink-0">
+                <img class="object-cover w-full h-48" src="{{ absolute_url('images/home/competences.jpg') }}" alt="Compétences">
+            </div>
+            <div class="flex flex-col justify-between flex-1 p-6 bg-gray-nine/20">
+                <div class="flex-1">
+                <a href="#" class="block mt-2">
+                    <p class="text-xl font-semibold text-turquoise font-accent">Compétences</p>
+                    <p class="mt-3 text-base">Dans un souci de qualité, évolutivité, fiabilité, je m'efforce de
+                    respecter les standards mis en place à travers des outils éprouvés et n'ai de cesse de
+                    suivre leur évolution.</p>
+                </a>
+                </div>
+                <div class="text-right mt-20">
+                    <a href="/competences" class="nine-btn-primary transform transition hover:scale-105 duration-300 ease-in-out">Plus d'infos <i class="fas fa-angle-double-right ml-3"></i></a>
+                </div>
+            </div>
+            </div>
+            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg border-b-8 border-b-yellow-nine wow animate__animated animate__fadeInUp animate__slow" data-wow-delay="1.8s">
+            <div class="flex-shrink-0">
+                <img class="object-cover w-full h-48" src="{{ absolute_url('images/home/centres-interet.jpg') }}" alt="Centres d'intérêt">
+            </div>
+            <div class="flex flex-col justify-between flex-1 p-6 bg-gray-nine/20">
+                <div class="flex-1">
+                <a href="#" class="block mt-2">
+                    <p class="text-xl font-semibold text-turquoise font-accent">Centres d'intérêt</p>
+                    <p class="mt-3 text-base">Mon goût pour les métiers d'art et la matière m'a mené vers l'un de mes
+                    loisirs : le modelage d'argile. La randonnée, quant à elle, me permet de profiter de la
+                    richesse de l'Auvergne.</p>
+                </a>
+                </div>
+                <div class="text-right mt-20">
+                    <a href="/creations" class="nine-btn-primary transform transition hover:scale-105 duration-300 ease-in-out">Plus d'infos <i class="fas fa-angle-double-right ml-3"></i></a>
+                </div>
+            </div>
+            </div>
         </div>
-        <div class="w-full sm:w-2/3 p-6 mt-10 wow animate__animated animate__zoomIn animate__slow">
-            <p class="mb-4">
-                Au cours des divers projets que j'ai menés, j’ai enrichi mon expertise
-                technique tout en élargissant mon éventail de compétences. Ceci me permet aujourd'hui de
-                disposer de <strong>solides bases</strong> autant en Front-end qu'en Back-end. C’est ainsi
-                que j’ai rejoint l’équipe R&amp;D de Coffreo en 2017 en qualité de <strong>développeur PHP
-                senior</strong>.
-            </p>
-
-            <p class="mb-4">
-                <strong>Empathique</strong>, je m’intègre aisément au sein d’un groupe. La
-                valeur du <strong>collectif</strong> et l’<strong>esprit d’équipe</strong> sont primordiaux,
-                lorsque je suis en confiance, c’est avec plaisir que je fais en sorte de renforcer la
-                <strong>cohésion</strong> et pourquoi pas avec quelques touches d’humour !
-            </p>
-
-            <p class="mb-4">
-                Ayant une appétence pour la coordination et la gestion de projets, j’ai évolué
-                fin 2019 sur un poste de <strong>Product Owner</strong>, me permettant d’allier mes
-                connaissances techniques, mon envie de dynamiser une équipe et d’élaborer une vision Produit.
-            </p>
-
-            <p class="mb-4">
-                Mon parcours professionnel a affiné ma sensibilité visuelle que ce soit au
-                niveau de l’aspect graphique ou de l’<strong>expérience utilisateur</strong>.
-                <strong>Motivée</strong> par l’envie de me dépasser, voire même de me surprendre, j’ai voulu
-                donner un sens à ce que je faisais et j’ai alors suivi une formation de <strong>Product
-                Designer</strong> pour mettre mes compétences au service des utilisateurs.
-            </p>
-
-            <p class="mb-4">
-                <strong>Curieuse</strong> de nature, je m’intéresse à des sujets variés et
-                aime apprendre de nouvelles choses, notamment dans le domaine de l’<strong>amélioration de
-                soi</strong> et de la qualité de vie. Apprendre des autres mais également apprendre de soi :
-                c’est un vrai défi qui demande de l’<strong>ouverture d’esprit</strong>.
-            </p>
-
-            <p class="mb-4">
-                <strong>Dynamique</strong> et motivée par l’envie d’évoluer, je prends plaisir
-                à relever de nouveaux challenges me permettant de m’épanouir.
-            </p>
         </div>
     </div>
 </section>
 
 <section class="bg-blue-medium text-white py-10">
-    <div class="flex flex-wrap items-center">
+    <div class="container flex flex-wrap items-center">
         <div class="w-full md:w-3/12 px-12 md:px-4 ml-auto mr-auto mt-10 wow animate__animated animate__fadeInUp" data-wow-delay="0.3s">
             <div class="skill-picto"><i class="fas fa-seedling"></i></div>
             <h3 class="skill-title">{{ data.nbYearsExperience }} ans d'expérience</h3>
@@ -266,65 +279,52 @@
     </div>
 </section>
 
-<section id="competences" class="bg-white py-10">
-    <div class="container relative px-4 py-12 sm:px-6 lg:py-16 lg:px-8">
-        <div class="relative mx-auto max-w-6xl">
-        <div class="grid max-w-lg gap-9 mx-auto lg:grid-cols-3 lg:max-w-none">
-            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg border-b-8 border-b-yellow-nine wow animate__animated animate__fadeInUp animate__slow" data-wow-delay="0.6s">
-            <div class="flex-shrink-0">
-                <img class="object-cover w-full h-48" src="{{ absolute_url('images/home/experience.jpg') }}" alt="">
-            </div>
-            <div class="flex flex-col justify-between flex-1 p-6 bg-gray-nine/20">
-                <div class="flex-1">
-                <a href="#" class="block mt-2">
-                    <p class="text-xl font-semibold text-turquoise font-accent">Expérience</p>
-                    <p class="mt-3 text-base">Passionnée de nouvelles technologies depuis plus de 15 ans,
-                    dotée d'un profil expérimenté et polyvalent, je m'applique à analyser, développer,
-                    communiquer et proposer des solutions.</p>
-                </a>
-                </div>
-                <div class="text-right mt-20">
-                    <a href="/experience" class="nine-btn-primary transform transition hover:scale-105 duration-300 ease-in-out">Plus d'infos <i class="fas fa-angle-double-right ml-3"></i></a>
-                </div>
-            </div>
-            </div>
-            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg border-b-8 border-b-yellow-nine wow animate__animated animate__fadeInUp animate__slow" data-wow-delay="1.2s">
-            <div class="flex-shrink-0">
-                <img class="object-cover w-full h-48" src="{{ absolute_url('images/home/competences.jpg') }}" alt="Compétences">
-            </div>
-            <div class="flex flex-col justify-between flex-1 p-6 bg-gray-nine/20">
-                <div class="flex-1">
-                <a href="#" class="block mt-2">
-                    <p class="text-xl font-semibold text-turquoise font-accent">Compétences</p>
-                    <p class="mt-3 text-base">Dans un souci de qualité, évolutivité, fiabilité, je m'efforce de
-                    respecter les standards mis en place à travers des outils éprouvés et n'ai de cesse de
-                    suivre leur évolution.</p>
-                </a>
-                </div>
-                <div class="text-right mt-20">
-                    <a href="/competences" class="nine-btn-primary transform transition hover:scale-105 duration-300 ease-in-out">Plus d'infos <i class="fas fa-angle-double-right ml-3"></i></a>
-                </div>
-            </div>
-            </div>
-            <div class="flex flex-col overflow-hidden rounded-lg shadow-lg border-b-8 border-b-yellow-nine wow animate__animated animate__fadeInUp animate__slow" data-wow-delay="1.8s">
-            <div class="flex-shrink-0">
-                <img class="object-cover w-full h-48" src="{{ absolute_url('images/home/centres-interet.jpg') }}" alt="Centres d'intérêt">
-            </div>
-            <div class="flex flex-col justify-between flex-1 p-6 bg-gray-nine/20">
-                <div class="flex-1">
-                <a href="#" class="block mt-2">
-                    <p class="text-xl font-semibold text-turquoise font-accent">Centres d'intérêt</p>
-                    <p class="mt-3 text-base">Mon goût pour les métiers d'art et la matière m'a mené vers l'un de mes
-                    loisirs : le modelage d'argile. La randonnée, quant à elle, me permet de profiter de la
-                    richesse de l'Auvergne.</p>
-                </a>
-                </div>
-                <div class="text-right mt-20">
-                    <a href="/creations" class="nine-btn-primary transform transition hover:scale-105 duration-300 ease-in-out">Plus d'infos <i class="fas fa-angle-double-right ml-3"></i></a>
-                </div>
-            </div>
-            </div>
+<section id="about" class="bg-white py-10">
+    <div class="container flex flex-wrap">
+        <div class="w-5/6 sm:w-1/3 p-6 wow animate__animated animate__zoomInUp animate__slow">
+            <img src="{{ absolute_url('images/home/cnoyer.jpg') }}" alt="Caroline Noyer • Product Owner &amp; Développeur web senior" class="drop-shadow-xl rounded-full w-3/4 mx-auto mt-10 border-4">
         </div>
+        <div class="w-full sm:w-2/3 p-6 mt-10 wow animate__animated animate__zoomIn animate__slow">
+            <p class="mb-4">
+                Au cours des divers projets que j'ai menés, j’ai enrichi mon expertise
+                technique tout en élargissant mon éventail de compétences. Ceci me permet aujourd'hui de
+                disposer de <strong>solides bases</strong> autant en Front-end qu'en Back-end. C’est ainsi
+                que j’ai rejoint l’équipe R&amp;D de Coffreo en 2017 en qualité de <strong>développeur PHP
+                senior</strong>.
+            </p>
+
+            <p class="mb-4">
+                <strong>Empathique</strong>, je m’intègre aisément au sein d’un groupe. La
+                valeur du <strong>collectif</strong> et l’<strong>esprit d’équipe</strong> sont primordiaux,
+                lorsque je suis en confiance, c’est avec plaisir que je fais en sorte de renforcer la
+                <strong>cohésion</strong> et pourquoi pas avec quelques touches d’humour !
+            </p>
+
+            <p class="mb-4">
+                Ayant une appétence pour la coordination et la gestion de projets, j’ai évolué
+                fin 2019 sur un poste de <strong>Product Owner</strong>, me permettant d’allier mes
+                connaissances techniques, mon envie de dynamiser une équipe et d’élaborer une vision Produit.
+            </p>
+
+            <p class="mb-4">
+                Mon parcours professionnel a affiné ma sensibilité visuelle que ce soit au
+                niveau de l’aspect graphique ou de l’<strong>expérience utilisateur</strong>.
+                <strong>Motivée</strong> par l’envie de me dépasser, voire même de me surprendre, j’ai voulu
+                donner un sens à ce que je faisais et j’ai alors suivi une formation de <strong>Product
+                Designer</strong> pour mettre mes compétences au service des utilisateurs.
+            </p>
+
+            <p class="mb-4">
+                <strong>Curieuse</strong> de nature, je m’intéresse à des sujets variés et
+                aime apprendre de nouvelles choses, notamment dans le domaine de l’<strong>amélioration de
+                soi</strong> et de la qualité de vie. Apprendre des autres mais également apprendre de soi :
+                c’est un vrai défi qui demande de l’<strong>ouverture d’esprit</strong>.
+            </p>
+
+            <p class="mb-4">
+                <strong>Dynamique</strong> et motivée par l’envie d’évoluer, je prends plaisir
+                à relever de nouveaux challenges me permettant de m’épanouir.
+            </p>
         </div>
     </div>
 </section>
