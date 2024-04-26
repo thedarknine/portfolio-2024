@@ -9,35 +9,35 @@
 
     {% for experience in data.experiencesList %}
         <section class="{% if loop.index is even %}bg-gray-light-nine{% else %}bg-white{% endif %} py-10">
-            <div class="container items-start flex flex-col w-full mt-0 lg:flex-row sm:mt-10">
-                <div class="sticky md:top-36 w-full max-w-md p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-1/4 wow animate__animated animate__fadeInLeft" data-wow-delay="0.6s">
+            <div class="container items-start flex flex-col mt-0 lg:flex-row sm:mt-10">
+                <div class="sticky md:top-36 w-full max-w-md p-4 mb-0 sm:mb-16 lg:mb-0 lg:w-1/4 wow animate__animated animate__fadeInLeft" data-wow-delay="0.6s">
                     <div class="flex flex-col items-center w-full h-full mr-5 rounded-lg {% if loop.index is even %}bg-img-2{% else %}bg-img-1{% endif %}">
                         <h2 class="text-2xl my-6 font-accent font-bold text-turquoise">{{ experience.startDate|date("Y") }}</h2>
                         <h2 class="text-2xl my-4 font-accent font-semibold text-blue-medium text-center">{{ experience.title }}</h2>
                         <img  class=" w-20 h-20" src="{{ absolute_url('images/company/' ~ experience.company.logo) }}" />
                     </div>
                 </div>
-                <div class="w-full max-w-xl p-4 mx-auto mb-0 sm:mb-16 lg:mb-0 lg:w-3/4 wow animate__animated animate__fadeInRight" data-wow-delay="0.6s">
+                <div class="w-full mx-4 p-4 mb-0 sm:mb-16 lg:mb-0 lg:w-3/4 wow animate__animated animate__fadeInRight" data-wow-delay="0.6s">
                     <h4 class="font-accent font-semibold text-turquoise mb-4 text-xl">{{ experience.subtitle }}</h4>
                     <p class="text-blue-gray-400"><i class="far fa-calendar-alt mr-1"></i>&nbsp;
-                                {% if experience.endDate is empty %}
-                                    Depuis {{ experience.startDate|date("m/Y") }}
-                                {% else %}
-                                    De {{ experience.startDate|date("m/Y") }} à {{ experience.endDate|date("m/Y") }}
+                            {% if experience.endDate is empty %}
+                                Depuis {{ experience.startDate|date("m/Y") }}
+                            {% else %}
+                                De {{ experience.startDate|date("m/Y") }} à {{ experience.endDate|date("m/Y") }}
+                            {% endif %}
+                            <i class="text-sm">(
+                                {% if experience.duration.nbYears > 0 %}
+                                    {{ experience.duration.nbYears }}
+                                    an{% if experience.duration.nbYears > 1 %}s{% endif %}
                                 {% endif %}
-                                <i class="text-sm">(
+                                {% if experience.duration.nbMonths != 0 %}
                                     {% if experience.duration.nbYears > 0 %}
-                                        {{ experience.duration.nbYears }}
-                                        an{% if experience.duration.nbYears > 1 %}s{% endif %}
+                                        et
                                     {% endif %}
-                                    {% if experience.duration.nbMonths != 0 %}
-                                        {% if experience.duration.nbYears > 0 %}
-                                            et
-                                        {% endif %}
-                                        {{ experience.duration.nbMonths }} mois
-                                    {% endif %}
-                                    )</i>
-                            </p>
+                                    {{ experience.duration.nbMonths }} mois
+                                {% endif %}
+                                )</i>
+                        </p>
                         <p class="mb-4 text-blue-gray-400">
                             <i class="fas fa-map-marker-alt mr-1"></i> {{ experience.company.name }}
                             - <span class="text-sm">{{ experience.company.city }} ({{ experience.company.department|format_number({min_integer_digit: 2}) }})</span>
