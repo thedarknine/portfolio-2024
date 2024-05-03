@@ -16,9 +16,14 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class IndexController extends AbstractController
 {
-    private function getImagesDir(): string
+    protected function getImagesDir(): string
     {
         return $this->getParameter('kernel.project_dir').'/public/images/';
+    }
+
+    protected function getCanonicalUrl(): string
+    {
+        return $this->getParameter('app.canonical_url');
     }
 
     #[Route('/', name: 'homepage')]
@@ -34,6 +39,15 @@ class IndexController extends AbstractController
             'equipe' => ['image' => 'images/home/equipe.jpg', 'alt' => 'Equipe', 'big' => false],
         ];
 
-        return $this->render('home.html.twig', ['page' => 'home', 'data' => $data]);
+        return $this->render('home.html.twig', [
+            'page' => 'home',
+            'data' => $data,
+            'canonical_url' => $this->getCanonicalUrl(),
+            'meta_title' => 'Caroline Noyer — Product Owner',
+            'meta_description' => 'Product owner depuis 4 ans sur des produits SaaS B2B, 
+                compétences UX et 12 ans de background technique dans le développement web. 
+                Dynamique, autonome et minutieuse.',
+            'meta_keywords' => 'CV,Design,Product Owner,Développeur,Développeur web full-stack,PHP,Symfony',
+        ]);
     }
 }

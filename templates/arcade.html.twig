@@ -9,7 +9,7 @@
 
     <section class="bg-white py-10">
         <div class="container">
-            <img src="{{ absolute_url('images/arcade/cnoyer-arcade.png') }}" class="sm:float-right sm:ml-14 mx-auto w-48 wow animate__animated animate__fadeInTopRight animate__slow" data-wow-delay="0.6s">
+            <img src="{{ 'images/arcade/cnoyer-arcade.png' }}" alt="Ma borne d'arcade" class="sm:float-right sm:ml-14 mx-auto w-48 wow animate__animated animate__fadeInTopRight animate__slow" data-wow-delay="0.6s">
             <div class="mb-10 wow animate__animated animate__fadeInBottomLeft" data-wow-delay="0.6s">
                 Tout est parti d’un magazine qui trainait sur une table au boulot, et hop pourquoi pas nous lancer dans la réalisation d’une borne. Ah oui ! Mais d’en avoir une à la maison ce serait encore mieux.
             </div>
@@ -26,8 +26,8 @@
             <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 wow animate__animated animate__fadeIn animate__slow">
                 {% for arcade in listItemsArcade %}
                     <div class="shadow-lg mb-4">
-                        <a href="{{ absolute_url('images/arcade/final/' ~ arcade) }}" class="glightbox9" data-gallery="gallery-final">
-                            <img src="{{ absolute_url('images/arcade/final/' ~ arcade) }}" alt="" class="rounded" />
+                        <a href="{{ 'images/arcade/final/' ~ arcade }}" class="glightbox9" data-gallery="gallery-final">
+                            <img src="{{ 'images/arcade/final/' ~ arcade }}" alt="Final" class="rounded" />
                         </a>
                     </div>
                 {% endfor %}
@@ -48,8 +48,8 @@
                 {% for arcade in listItemsArcade %}
                     <div class="shadow-lg mb-4">
                         <div>
-                            <a href="{{ absolute_url('images/arcade/at-the-beginning/' ~ arcade) }}" class="glightbox9" data-gallery="gallery-beginning">
-                                <img src="{{ absolute_url('images/arcade/at-the-beginning/' ~ arcade) }}" alt="" class="rounded">
+                            <a href="{{ 'images/arcade/at-the-beginning/' ~ arcade }}" class="glightbox9" data-gallery="gallery-beginning">
+                                <img src="{{ 'images/arcade/at-the-beginning/' ~ arcade }}" alt="At the beginning" class="rounded">
                             </a>
                         </div>
                     </div>
@@ -69,8 +69,8 @@
                 {% for arcade in listItemsArcade %}
                     <div class="shadow-lg mb-4">
                         <div>
-                            <a href="{{ absolute_url('images/arcade/side-panels/' ~ arcade) }}" class="glightbox9" data-gallery="gallery-side">
-                                <img src="{{ absolute_url('images/arcade/side-panels/' ~ arcade) }}" alt="" class="rounded">
+                            <a href="{{ 'images/arcade/side-panels/' ~ arcade }}" class="glightbox9" data-gallery="gallery-side">
+                                <img src="{{ 'images/arcade/side-panels/' ~ arcade }}" alt="Side panels" class="rounded">
                             </a>
                         </div>
                     </div>
@@ -83,8 +83,8 @@
                 {% for arcade in listItemsArcade %}
                     <div class="shadow-lg mb-4">
                         <div>
-                            <a href="{{ absolute_url('images/arcade/control-panel/' ~ arcade) }}" class="glightbox9" data-gallery="gallery-control">
-                                <img src="{{ absolute_url('images/arcade/control-panel/' ~ arcade) }}" alt="" class="rounded">
+                            <a href="{{ 'images/arcade/control-panel/' ~ arcade }}" class="glightbox9" data-gallery="gallery-control">
+                                <img src="{{ 'images/arcade/control-panel/' ~ arcade }}" alt="Control panel" class="rounded">
                             </a>
                         </div>
                     </div>
@@ -97,8 +97,8 @@
                 {% for arcade in listItemsArcade %}
                     <div class="shadow-lg mb-4">
                         <div>
-                            <a href="{{ absolute_url('images/arcade/upper-part/' ~ arcade) }}" class="glightbox9" data-gallery="gallery-upper">
-                                <img src="{{ absolute_url('images/arcade/upper-part/' ~ arcade) }}" alt="" class="rounded">
+                            <a href="{{ 'images/arcade/upper-part/' ~ arcade }}" class="glightbox9" data-gallery="gallery-upper">
+                                <img src="{{ 'images/arcade/upper-part/' ~ arcade }}" alt="Upper part" class="rounded">
                             </a>
                         </div>
                     </div>
@@ -111,8 +111,8 @@
                 {% for arcade in listItemsArcade %}
                     <div class="shadow-lg mb-4">
                         <div>
-                            <a href="{{ absolute_url('images/arcade/back-side/' ~ arcade) }}" class="glightbox9" data-gallery="gallery-back">
-                                <img src="{{ absolute_url('images/arcade/back-side/' ~ arcade) }}" alt="" class="rounded">
+                            <a href="{{ 'images/arcade/back-side/' ~ arcade }}" class="glightbox9" data-gallery="gallery-back">
+                                <img src="{{ 'images/arcade/back-side/' ~ arcade }}" alt="Back side" class="rounded">
                             </a>
                         </div>
                     </div>
@@ -131,8 +131,8 @@
                 {% for arcade in listItemsArcade %}
                     <div class="shadow-lg mb-4">
                         <div>
-                            <a href="{{ absolute_url('images/arcade/assembling/' ~ arcade) }}" class="glightbox9" data-gallery="gallery-assembling">
-                                <img src="{{ absolute_url('images/arcade/assembling/' ~ arcade) }}" alt="" class="rounded">
+                            <a href="{{ 'images/arcade/assembling/' ~ arcade }}" class="glightbox9" data-gallery="gallery-assembling">
+                                <img src="{{ 'images/arcade/assembling/' ~ arcade }}" alt="Assembling" class="rounded">
                             </a>
                         </div>
                     </div>
@@ -151,8 +151,8 @@
             <div class="grid grid-flow-row grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8 wow animate__animated animate__fadeIn">
                 {% for arcade in listItemsArcade %}
                     <div class="shadow-lg mb-4">
-                        <a href="{{ absolute_url('images/arcade/design/' ~ arcade) }}" class="glightbox9" data-gallery="gallery-design">
-                            <img src="{{ absolute_url('images/arcade/design/' ~ arcade) }}" alt="" class="rounded" />
+                        <a href="{{ 'images/arcade/design/' ~ arcade }}" class="glightbox9" data-gallery="gallery-design">
+                            <img src="{{ 'images/arcade/design/' ~ arcade }}" alt="Design" class="rounded" />
                         </a>
                     </div>
                 {% endfor %}
@@ -171,8 +171,8 @@
                 {% for arcade in listItemsArcade %}
                     <div class="shadow-lg mb-4">
                         <div>
-                            <a href="{{ absolute_url('images/arcade/recalbox/' ~ arcade) }}" class="glightbox9" data-gallery="gallery-recalbox">
-                                <img src="{{ absolute_url('images/arcade/recalbox/' ~ arcade) }}" alt="" class="rounded">
+                            <a href="{{ 'images/arcade/recalbox/' ~ arcade }}" class="glightbox9" data-gallery="gallery-recalbox">
+                                <img src="{{ 'images/arcade/recalbox/' ~ arcade }}" alt="Recalbox" class="rounded">
                             </a>
                         </div>
                     </div>

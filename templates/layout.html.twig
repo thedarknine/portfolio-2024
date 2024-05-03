@@ -9,9 +9,11 @@
         <link rel="icon" type="image/png" sizes="32x32" href="{{ absolute_url('images/global/favicon-32x32.png') }}">
         <link rel="icon" type="image/png" sizes="16x16" href="{{ absolute_url('images/global/favicon-16x16.png') }}">
 
-        <meta name="title" content="Caroline Noyer — Product Owner">
-        <meta name="description" content="Product owner depuis 4 ans sur des produits SaaS B2B, compétences UX et 12 ans de background technique dans le développement web. Dynamique, autonome et minutieuse.">
-        <meta name="keywords" content="CV,Design,Product Owner,Développeur,Développeur web full-stack,PHP,Symfony">
+        <link rel="canonical" href="{{ canonical_url }}/{% if page != 'home' %}{{ page }}{% endif %}">
+
+        <meta name="title" content="{{ meta_title|default('Caroline Noyer — Product Owner') }}">
+        <meta name="description" content="{{ meta_description|default('Product owner depuis 4 ans sur des produits SaaS B2B, compétences UX et 12 ans de background technique dans le développement web. Dynamique, autonome et minutieuse.') }}">
+        <meta name="keywords" content="{{ meta_keywords|default('CV,Design,Product Owner,Développeur,Développeur web full-stack,PHP,Symfony') }}">
         <meta name="author" content="Caroline Noyer">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="index,follow">
@@ -20,16 +22,17 @@
         <!-- Open Graph / Facebook -->
         <meta property="og:type" content="website">
         <meta property="og:url" content="https://carolinenoyer.fr/">
-        <meta property="og:title" content="Caroline Noyer — Product Owner">
-        <meta property="og:description" content="Product owner depuis 4 ans sur des produits SaaS B2B, compétences UX et 12 ans de background technique dans le développement web. Dynamique, autonome et minutieuse.">
+        <meta property="og:locale" content="fr_FR">
+        <meta property="og:title" content="{{ meta_title|default('Caroline Noyer — Product Owner') }}">
+        <meta property="og:description" content="{{ meta_description|default('Product owner depuis 4 ans sur des produits SaaS B2B, compétences UX et 12 ans de background technique dans le développement web. Dynamique, autonome et minutieuse.') }}">
         <meta property="og:image" content="https://carolinenoyer.fr/images/cnoyer-product-owner.jpg">
-        <meta property="og:site_name" content="Caroline Noyer Online Portfolio">
+        <meta property="og:site_name" content="Caroline Noyer | Online Portfolio">
 
         <!-- Twitter -->
         <meta property="twitter:card" content="summary_large_image">
         <meta property="twitter:url" content="https://carolinenoyer.fr/">
-        <meta property="twitter:title" content="Caroline Noyer — Product Owner">
-        <meta property="twitter:description" content="Product owner depuis 4 ans sur des produits SaaS B2B, compétences UX et 12 ans de background technique dans le développement web. Dynamique, autonome et minutieuse.">
+        <meta property="twitter:title" content="{{ meta_title|default('Caroline Noyer — Product Owner') }}">
+        <meta property="twitter:description" content="{{ meta_description|default('Product owner depuis 4 ans sur des produits SaaS B2B, compétences UX et 12 ans de background technique dans le développement web. Dynamique, autonome et minutieuse.') }}">
         <meta property="twitter:image" content="https://carolinenoyer.fr/images/cnoyer-product-owner.jpg">
 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -186,7 +189,7 @@
 
 {#
         <div x-data="{ showPrivacyPolicy: false }" class"hidden">
-            
+
             <!-- Privacy Policy Modal -->
             <div x-show="showPrivacyPolicy" class="fixed z-10 inset-0 flex items-center justify-center">
             <div class="absolute inset-0 bg-gray-500 opacity-75"></div>

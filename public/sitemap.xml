@@ -1,0 +1,43 @@
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!--  created with Free Online Sitemap Generator www.xml-sitemaps.com  -->
+  <url>
+    <loc>https://carolinenoyer.fr/</loc>
+    <lastmod>2024-05-01T06:55:55+00:00</lastmod>
+    <priority>1.00</priority>
+  </url>
+  <url>
+    <loc>https://carolinenoyer.fr/experience</loc>
+    <lastmod>2024-05-01T06:55:55+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://carolinenoyer.fr/competences</loc>
+    <lastmod>2024-05-01T06:55:55+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://carolinenoyer.fr/formation</loc>
+    <lastmod>2024-05-01T06:55:55+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://carolinenoyer.fr/projets</loc>
+    <lastmod>2024-05-01T06:55:55+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://carolinenoyer.fr/arcade</loc>
+    <lastmod>2024-05-01T06:55:55+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://carolinenoyer.fr/creations</loc>
+    <lastmod>2024-05-01T06:55:55+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+  <url>
+    <loc>https://carolinenoyer.fr/photos</loc>
+    <lastmod>2024-05-01T06:55:55+00:00</lastmod>
+    <priority>0.80</priority>
+  </url>
+</urlset>

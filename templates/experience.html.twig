@@ -14,7 +14,7 @@
                     <div class="flex flex-col items-center w-full h-full mr-5 rounded-lg {% if loop.index is even %}bg-img-2{% else %}bg-img-1{% endif %}">
                         <h2 class="text-2xl my-6 font-accent font-bold text-turquoise">{{ experience.startDate|date("Y") }}</h2>
                         <h2 class="text-2xl my-4 font-accent font-semibold text-blue-medium text-center">{{ experience.title }}</h2>
-                        <img  class=" w-20 h-20" src="{{ absolute_url('images/company/' ~ experience.company.logo) }}" />
+                        <img  class=" w-20 h-20" src="{{ absolute_url('images/company/' ~ experience.company.logo) }}" alt="{{ experience.company.name }}" />
                     </div>
                 </div>
                 <div class="w-full mx-4 p-4 mb-0 sm:mb-16 lg:mb-0 lg:w-3/4 wow animate__animated animate__fadeInRight" data-wow-delay="0.6s">

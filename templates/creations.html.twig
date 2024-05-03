@@ -16,8 +16,8 @@
                 {% for creation in listItemsCreations %}
                     <div class="shadow-lg mb-4">
                         <div>
-                            <a href="{{ absolute_url('images/creations/' ~ type.label ~ '/' ~ creation) }}" class="glightbox9" data-gallery="gallery{{ type.id }}">
-                                <img src="{{ absolute_url('images/creations/' ~ type.label ~ '/' ~ creation) }}" alt="" class="rounded">
+                            <a href="{{ 'images/creations/' ~ type.label ~ '/' ~ creation }}" class="glightbox9" data-gallery="gallery{{ type.id }}">
+                                <img src="{{ 'images/creations/' ~ type.label ~ '/' ~ creation }}" alt="Argile" class="rounded">
                             </a>
                         </div>
                     </div>

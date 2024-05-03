@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /analytics/
+Disallow: /docs/
+Disallow: /medias/
+Sitemap: https://carolinenoyer.fr/sitemap.xml

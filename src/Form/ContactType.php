@@ -1,11 +1,18 @@
 <?php
 
+/**
+ * This file is part of Portfolio project.
+ * (c) Caroline Noyer <hello@carolinenoyer.info>
+ *
+ * This source file is subject to the MIT license that is bundled
+ * with this source code in the file LICENSE.
+ */
+
 namespace App\Form;
 
 use App\Entity\Contact;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
-use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
@@ -18,21 +25,21 @@ class ContactType extends AbstractType
         $builder
             ->add('name', TextType::class, [
                 'empty_data' => '',
-                "attr" => [
-                    "placeholder" => 'John Doe',
+                'attr' => [
+                    'placeholder' => 'John Doe',
                 ],
             ])
             ->add('email', EmailType::class, [
                 'empty_data' => '',
-                "attr" => [
-                    "placeholder" => 'john.doe@email.com',
+                'attr' => [
+                    'placeholder' => 'john.doe@email.com',
                 ],
             ])
             ->add('message', TextareaType::class, [
                 'attr' => ['rows' => 6],
                 'empty_data' => '',
-                "attr" => [
-                    "placeholder" => 'Votre message',
+                'attr' => [
+                    'placeholder' => 'Votre message',
                 ],
             ])
         ;

@@ -18,27 +18,26 @@ use App\Repository\PhotoTypeRepository;
 use App\Repository\ProjectRepository;
 use App\Repository\SkillRepository;
 use App\Repository\SkillTypeRepository;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Finder\Finder;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
 
-class PagesController extends AbstractController
+class PagesController extends IndexController
 {
-    private function getImagesDir(): string
-    {
-        return $this->getParameter('kernel.project_dir').'/public/images/';
-    }
-
     #[Route('/experience', name: 'experience')]
     public function experience(ExperienceRepository $repository): Response
     {
         $data['experiencesList'] = $repository->getExperiencesWithCompany();
 
         return $this->render(
-            'experience.html.twig',
-            ['page' => 'experience', 'data' => $data]
-        );
+            'experience.html.twig', [
+                'page' => 'experience',
+                'data' => $data,
+                'canonical_url' => $this->getCanonicalUrl(),
+                'meta_title' => 'Caroline Noyer — Expériences professionnelles',
+                'meta_description' => "Mon expérience m'a permis d'acquérir les compétences en gestion de projet et d'équipe, en communiquant de façon claire.",
+                'meta_keywords' => 'Product Owner,Squad Leader,Développeur back senior,Développeur fullstack',
+            ]);
     }
 
     #[Route('/competences', name: 'competences')]
@@ -48,9 +47,14 @@ class PagesController extends AbstractController
         $data['skillsList'] = $skillRepository->getSkillsOrderByType();
 
         return $this->render(
-            'competences.html.twig',
-            ['page' => 'competences', 'data' => $data]
-        );
+            'competences.html.twig', [
+                'page' => 'competences',
+                'data' => $data,
+                'canonical_url' => $this->getCanonicalUrl(),
+                'meta_title' => 'Caroline Noyer — Compétences',
+                'meta_description' => "Mes compétences transverses couvrent la gestion de produit, la partie technique ainsi que l'expérience utilisateur.",
+                'meta_keywords' => 'Product,Agile,Scrum,Figma,Notion,Jira,PHP,Symfony',
+            ]);
     }
 
     #[Route('/formation', name: 'formation')]
@@ -59,9 +63,14 @@ class PagesController extends AbstractController
         $data['educationsList'] = $educationRepository->getEducationsWithSchool();
 
         return $this->render(
-            'formation.html.twig',
-            ['page' => 'formation', 'data' => $data]
-        );
+            'formation.html.twig', [
+                'page' => 'formation',
+                'data' => $data,
+                'canonical_url' => $this->getCanonicalUrl(),
+                'meta_title' => 'Caroline Noyer — Formations universitaires et professionnelles',
+                'meta_description' => "De formation universitaire dans l'informatique, j'ai obtenu un Master 2 en stratégies et pilotage de projets.",
+                'meta_keywords' => 'Formation The Design Crew,Master 2 Pro,Master 2 Recherche',
+            ]);
     }
 
     #[Route('/projets', name: 'projets')]
@@ -70,9 +79,14 @@ class PagesController extends AbstractController
         $data['projectsList'] = $projectRepository->getProjects();
 
         return $this->render(
-            'projets.html.twig',
-            ['page' => 'projets', 'data' => $data]
-        );
+            'projets.html.twig', [
+                'page' => 'projets',
+                'data' => $data,
+                'canonical_url' => $this->getCanonicalUrl(),
+                'meta_title' => 'Caroline Noyer — Projets réalisés',
+                'meta_description' => "Ma passion pour le digital et le design m'ont conduit vers la création de sites Internet et de créations graphiques.",
+                'meta_keywords' => 'Créations graphiques,Développement de sites web',
+            ]);
     }
 
     #[Route('/arcade', name: 'arcade')]
@@ -95,9 +109,14 @@ class PagesController extends AbstractController
         $data['arcadeList'] = $arcadeList;
 
         return $this->render(
-            'arcade.html.twig',
-            ['page' => 'arcade', 'data' => $data]
-        );
+            'arcade.html.twig', [
+                'page' => 'arcade',
+                'data' => $data,
+                'canonical_url' => $this->getCanonicalUrl(),
+                'meta_title' => "Caroline Noyer — Borne d'arcade",
+                'meta_description' => "Mon intérêt pour les travaux manuels et les anciens jeux vidéos m'ont mené à créer moi-même ma borne d'arcade.",
+                'meta_keywords' => "Borne,Arcade,Borne d'arcade,Nostalgie,Jeux vidéos,Nintendo,Super Mario",
+            ]);
     }
 
     #[Route('/creations', name: 'creations')]
@@ -121,9 +140,14 @@ class PagesController extends AbstractController
         $data['creationsList'] = $creationsList;
 
         return $this->render(
-            'creations.html.twig',
-            ['page' => 'creations', 'data' => $data]
-        );
+            'creations.html.twig', [
+                'page' => 'creations',
+                'data' => $data,
+                'canonical_url' => $this->getCanonicalUrl(),
+                'meta_title' => "Caroline Noyer — Créations d'argile",
+                'meta_description' => "L'un de mes passe-temps réside dans le modelage d'argile, c'est un processus créatif qui permet une liberté d'expression.",
+                'meta_keywords' => 'Argile,Modelage,Sculpture',
+            ]);
     }
 
     #[Route('/photos', name: 'photos')]
@@ -155,8 +179,13 @@ class PagesController extends AbstractController
         $data['photosList'] = $photosList;
 
         return $this->render(
-            'photos.html.twig',
-            ['page' => 'photos', 'data' => $data]
-        );
+            'photos.html.twig', [
+                'page' => 'photos',
+                'data' => $data,
+                'canonical_url' => $this->getCanonicalUrl(),
+                'meta_title' => 'Caroline Noyer — Photographies',
+                'meta_description' => "La randonnée m'a permis d'expérimenter la photo en alliant la découverte de notre belle région.",
+                'meta_keywords' => 'Photographies,Photos,Auvergne,Puy-de-Dôme,Randonnées',
+            ]);
     }
 }
