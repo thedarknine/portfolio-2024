@@ -21,6 +21,7 @@ cs:
 	vendor/bin/php-cs-fixer fix --config=.php-cs-fixer.php --diff --verbose
 	vendor/bin/twig-cs-fixer lint templates
 	npx stylelint "assets/**/*.{scss,css,js}"
+	npx eslint assets/*.js
 
 ## Run dev front-end
 watch:
