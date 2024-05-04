@@ -241,7 +241,7 @@ Rédaction des expressions de besoin et spécifications fonctionnelles</span></l
         ['label' => 'm2-rech', 'title' => 'DEA Informatique', 'year' => 2005, 'type' => 'univ', 'school' => 'ubp-clermont', 'details' => 'Modèle, Système, Intelligence', 'speciality' => 'Systèmes d\'information et de communication'],
         ['label' => 'maitrise', 'title' => 'Maîtrise Informatique', 'year' => 2004, 'type' => 'univ', 'school' => 'ubp-clermont', 'details' => 'Sciences et Technologies - Mention Informatique', 'speciality' => 'Classification, data-mining et algorithmique pour les grandes bases', 'mention' => 'Bien'],
         ['label' => 'licence', 'title' => 'Licence Informatique', 'year' => 2003, 'type' => 'univ', 'school' => 'ubp-clermont', 'details' => 'Sciences et Technologies - Mention Informatique', 'speciality' => 'Optimisation et technologies de l\'information', 'mention' => 'Assez bien'],
-        ['label' => 'deug', 'title' => 'DEUG MIAS', 'year' => 2002, 'type' => 'univ', 'school' => 'univ-orleans', 'details' => 'Mathématiques, informatique et applications aux sciences', 'speciality' => 'Sciences de la Vie et de la Terre'],
+        ['label' => 'deug', 'title' => 'DEUG MIAS (Mathématiques et Informatique Appliqués aux Sciences)', 'year' => 2002, 'type' => 'univ', 'school' => 'univ-orleans', 'details' => 'Mathématiques, informatique et applications aux sciences', 'speciality' => 'Sciences de la Vie et de la Terre'],
     ];
     private $projectsList = [
         ['label' => 'datamining', 'name' => 'Fouille de données interactive par navigation', 'period' => 'De avril 2004 à juillet 2004', 'year' => 2004,

@@ -24,7 +24,7 @@ global.$ = global.jQuery = $;
 
     /*------ Typed text ----*/
     const typed = new Typed('#typedtext', {
-        strings: ['Product Owner', 'UX Design', 'Développement web'],
+        strings: ['Product Ownership', 'UX Design', 'Développement web'],
         startDelay: 500,
         typeSpeed: 50,
         backSpeed: 20,

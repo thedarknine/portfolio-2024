@@ -7,6 +7,16 @@
         {% embed "blocks/title.html.twig" with {'pagetitle': "Side projects"} %}{% endembed %}
     </div>
 
+    <div class="container">
+        Une liste non-exhaustive de projets sur lesquels j’ai eu l'occasion de travailler en dehors du boulot depuis mes stages universitaires. Le choix est varié !
+        <!--
+        Voici une sélection de projets sur lesquels j'ai eu l'occasion de travailler en dehors de mon travail régulier, depuis mes stages universitaires. Cette liste reflète la diversité de mes intérêts et de mes compétences :
+Projet de design graphique : J'ai réalisé plusieurs projets de design graphique, notamment la création de logos, d'affiches et de supports promotionnels pour des événements locaux et des organisations à but non lucratif. J'ai utilisé des outils de conception tels que Adobe Photoshop et Illustrator pour donner vie à mes idées créatives.
+
+Cette liste de projets démontre ma polyvalence et mon engagement à explorer de nouveaux domaines et à relever des défis variés en dehors de mon parcours professionnel. Chaque projet m'a permis de développer mes compétences et d'acquérir de nouvelles expériences précieuses, enrichissant ainsi mon parcours personnel et professionnel.
+        -->
+    </div>
+
     {% for project in data.projectsList %}
         <section class="{% if loop.index is even %}bg-gray-light-nine{% else %}bg-white{% endif %} py-10">
             <div class="container flex flex-col w-full mt-0 lg:flex-row sm:mt-10 lg:mt-10">
