@@ -1,0 +1,37 @@
+<script type='text/javascript'>
+    // Some default pre init
+    var Countly = Countly || {};
+    Countly.q = Countly.q || [];
+
+    Countly.app_key = "{{ app.request.server.get('COUNTLY_APP_KEY') }}";
+    Countly.url = "{{ app.request.server.get('COUNTLY_URL') }}";
+
+    Countly.q.push(['track_sessions']);
+    Countly.q.push(['track_pageview']);
+
+    // Load Countly script asynchronously
+    (function() {
+    var cly = document.createElement('script'); cly.type = 'text/javascript';
+    cly.async = true;
+    // Enter URL of script here (see below for other option)
+    cly.src = 'https://cdn.jsdelivr.net/npm/countly-sdk-web@latest/lib/countly.min.js';
+    cly.onload = function(){Countly.init()};
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
+    })();
+</script>
+
+<!-- Matomo -->
+<script>
+    var _paq = window._paq = window._paq || [];
+    /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+        var u="{{ app.request.server.get('MATOMO_URL') }}";
+        _paq.push(['setTrackerUrl', u+'matomo.php']);
+        _paq.push(['setSiteId', '1']);
+        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+        g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+    })();
+</script>
+<!-- End Matomo Code -->

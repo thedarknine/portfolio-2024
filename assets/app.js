@@ -4,24 +4,63 @@
  * We recommend including the built version of this JavaScript file
  * (and its CSS file) in your base layout (base.html.twig).
  */
+import './bootstrap.js';
 
 // any CSS you import will output into a single css file (app.css in this case)
-import './styles/app.scss';
+import '@fortawesome/fontawesome-free/css/all.css';
+import './vendor/@fontsource/oxygen/index.css';
+import './vendor/@fontsource/oxygen/300.css';
+import './vendor/@fontsource/oxygen/700.css';
+import './vendor/@fontsource-variable/league-spartan/index.css';
+import './vendor/aos/dist/aos.css';
+import './vendor/glightbox/dist/css/glightbox.min.css';
+import './styles/app.css';
 
-import 'animate.css';
-const WOW = require('wowjs');
-import Swiper from 'swiper';
-import GLightbox from 'glightbox';
+import AOS from './vendor/aos/dist/aos.js';
+import GLightbox from './vendor/glightbox/dist/js/glightbox.min.js';
+// import Swiper from './vendor/swiper/swiper.min.js';
 
-// create global $ and jQuery variables
-global.$ = global.jQuery = $;
+// create $ and jQuery variables
+import jquery from './vendor/jquery/dist/jquery.min.js';
+const $ = jquery;
+window.$ = window.jQuery = $;
 
 (function ($) {
     "use strict";
 
-    /*------ Wow Active ----*/
-    window.wow = new WOW.WOW({ live: false });
-    window.wow.init();
+    /*-----------------
+        Menu Stick
+    -----------------*/
+    var header = $('.sticky-bar');
+    var win = $(window);
+    win.on('scroll', function () {
+        var scroll = win.scrollTop();
+        if (scroll < 40) {
+            header.removeClass('stick');
+        } else {
+            header.addClass('stick');
+        }
+    });
+
+    /*------ AOS ----*/
+    // You get the current window width
+    var width = window.innerWidth;
+
+    //Than you define the AOS settings for different widths
+    if (width <= 600) { // For example, this can be for mobile devices
+        AOS.init({disable: 'mobile'});
+    } else if (width > 600 && width <= 900) { // And you make a condition for tablets too
+        AOS.init({
+            offset: 300,
+            duration: 1200
+        });
+    } else { // Else for just, you know, desktops
+        AOS.init({
+            offset: 50,
+            duration: 1200,
+            // easing: 'ease-out-cubic',
+        });
+    }
 })(jQuery);
 
 // Burger menus
@@ -65,13 +104,13 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // Swiper 
-    const swiper = new Swiper('.skills-carousel', {
+   /* const swiper = new Swiper('.skills-carousel', {
         spaceBetween: 64,
         centeredSlides: true,
         loop: true,
         speed: 5000,
         noSwiping: true,
-    });
+    });*/
 
     // Lightbox
     const myLightbox = function () {

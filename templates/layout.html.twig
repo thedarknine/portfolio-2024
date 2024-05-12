@@ -35,13 +35,16 @@
         <meta property="twitter:description" content="{{ meta_description|default('Product owner depuis 4 ans sur des produits SaaS B2B, compétences UX et 12 ans de background technique dans le développement web. Dynamique, autonome et minutieuse.') }}">
         <meta property="twitter:image" content="https://carolinenoyer.fr/images/cnoyer-product-owner.jpg">
 
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
         {% block stylesheets %}
-            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css">
+        {% endblock %}
 
-            {{ encore_entry_link_tags('app') }}
+        {% block javascripts %}
+            <script src="https://kit.fontawesome.com/e13f84fe9c.js" crossorigin="anonymous"></script>
+            {% block importmap %}{{ importmap('app') }}{% endblock %}
+
+            {% if app.request.server.get('APP_ENV') == "prod" %}
+            {% include 'blocks/analytics.html.twig' %}
+            {% endif %}
         {% endblock %}
     </head>
     <body>
@@ -93,7 +96,7 @@
                             <img class="h-10" src="https://medias.carolinenoyer.fr/images/logo-cnoyer-full-250.svg" alt="">
                         </a>
                         <button class="navbar-close">
-                            <svg class="h-6 w-6 text-blue-gray-400 cursor-pointer hover:text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <svg class="h-6 w-6 text-slate-400 cursor-pointer hover:text-blue-500" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                             </svg>
                         </button>
@@ -140,38 +143,38 @@
                 <section class="py-20">
                     <div class="container px-4 mx-auto">
                         <div class="flex flex-wrap mb-12 lg:mb-20 -mx-3 text-center lg:text-left">
-                            <div class="w-full lg:w-2/5 px-3 mb-8 lg:mb-0 wow animate__animated animate__fadeInUp" data-wow-delay=".6s">
-                                <p class="max-w-md mx-auto lg:max-w-full lg:mx-0 lg:pr-32 text-blue-gray-400 text-sm leading-relaxed">
+                            <div class="w-full lg:w-2/5 px-3 mb-8 lg:mb-0" data-aos="fade-up" data-aos-delay="50" data-aos-duration="1500" data-aos-easing="ease-out-cubic">
+                                <p class="max-w-md mx-auto lg:max-w-full lg:mx-0 lg:pr-32 text-slate-400 text-sm leading-relaxed">
                                 De <strong>solides bases techniques</strong> et un intérêt particulier pour l’<strong>expérience utilisateur</strong>, me permettent de résoudre les
                                 problèmes à tous les niveaux avec une attention portée aux détails.
                                 </p>
                             </div>
-                            <div class="w-full lg:w-1/5 px-3 mb-6 lg:mb-0 wow animate__animated animate__fadeInUp" data-wow-delay=".3s">
+                            <div class="w-full lg:w-1/5 px-3 mb-6 lg:mb-0" data-aos="fade-up" data-aos-delay="150" data-aos-duration="1500" data-aos-easing="ease-out-cubic">
                                 <a class="inline-block mx-auto lg:mx-0 text-3xl font-semibold leading-none" href="https://carolinenoyer.fr/">
                                     <img class="h-14 mx-auto" src="https://medias.carolinenoyer.fr/images/logo-2024-colored.png" alt="">
                                 </a>
                             </div>
-                            <div class="w-full lg:w-1/5 px-3 mb-8 lg:mb-0 wow animate__animated animate__fadeInUp" data-wow-delay=".9s">
+                            <div class="w-full lg:w-1/5 px-3 mb-8 lg:mb-0" data-aos="fade-up" data-aos-delay="250" data-aos-duration="1500" data-aos-easing="ease-out-cubic">
                                 <p class="mb-2 lg:mb-4 lg:text-lg text-smallcaps text-turquoise">Parcours</p>
                                 <ul class="list-unstyled mb-0">
-                                    <li class="mb-2"><a href="/experience" class="text-blue-gray-400 text-sm">Expérience</a></li>
-                                    <li class="mb-2"><a href="/competences" class="text-blue-gray-400 text-sm">Compétences</a></li>
-                                    <li class="mb-2"><a href="/formation" class="text-blue-gray-400 text-sm">Formation</a></li>
-                                    <li class="mb-2"><a href="/projets" class="text-blue-gray-400 text-sm">Projets</a></li>
+                                    <li class="mb-2"><a href="/experience" class="text-slate-400 text-sm">Expérience</a></li>
+                                    <li class="mb-2"><a href="/competences" class="text-slate-400 text-sm">Compétences</a></li>
+                                    <li class="mb-2"><a href="/formation" class="text-slate-400 text-sm">Formation</a></li>
+                                    <li class="mb-2"><a href="/projets" class="text-slate-400 text-sm">Projets</a></li>
                                 </ul>
                             </div>
-                            <div class="w-full lg:w-1/5 px-3 wow animate__animated animate__fadeInUp" data-wow-delay="1.2s">
+                            <div class="w-full lg:w-1/5 px-3" data-aos="fade-up" data-aos-delay="400" data-aos-duration="1500" data-aos-easing="ease-out-cubic">
                                 <p class="mb-2 lg:mb-4 lg:text-lg text-smallcaps text-turquoise">Centres d'intérêt</p>
                                 <ul class="list-unstyled mb-0">
-                                    <li class="mb-2"><a href="/creations" class="text-blue-gray-400 text-sm">Créations</a></li>
-                                    <li class="mb-2"><a href="/photos" class="text-blue-gray-400 text-sm">Photos</a></li>
-                                    <li class="mb-2"><a href="/arcade" class="text-blue-gray-400 text-sm">Arcade</a></li>
+                                    <li class="mb-2"><a href="/creations" class="text-slate-400 text-sm">Créations</a></li>
+                                    <li class="mb-2"><a href="/photos" class="text-slate-400 text-sm">Photos</a></li>
+                                    <li class="mb-2"><a href="/arcade" class="text-slate-400 text-sm">Arcade</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="flex flex-col lg:flex-row items-center lg:justify-between">
-                            <p class="text-xs text-blue-gray-400 wow animate__animated animate__fadeInUp" data-wow-delay="1.5s"><b>©Nine | Copyright</b> 2006-{{ "now"|date("Y") }} &bull; <a x-on:click="showPrivacyPolicy = true" class="" href="#"> View Privacy Policy </a></p>
-                            <div class="order-first lg:order-last -mx-2 mb-4 lg:mb-0 wow animate__animated animate__fadeInUp" data-wow-delay="1.8s">
+                            <p class="text-xs text-slate-400" data-aos="fade-up" data-aos-delay="500" data-aos-duration="1500" data-aos-easing="ease-out-cubic"><b>©Nine | Copyright</b> 2006-{{ "now"|date("Y") }} &bull; <a x-on:click="showPrivacyPolicy = true" class="" href="#"> View Privacy Policy </a></p>
+                            <div class="order-first lg:order-last -mx-2 mb-4 lg:mb-0" data-aos="fade-up" data-aos-delay="700" data-aos-duration="1500" data-aos-easing="ease-out-cubic">
                                 <ul class="list-inline">
                                     <li class="list-inline-item"><a href="https://www.linkedin.com/in/carolinenoyer" target="_blank" title="LinkedIn"><i class="fa fa-linkedin"></i></a></li>
                                     <li class="list-inline-item"><a href="https://instagram.com/caro.noyer/" target="_blank" title="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
@@ -236,52 +239,8 @@
             </div>
         </div> #}
 
-        {% block javascripts %}
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-            <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
-            <script src="https://kit.fontawesome.com/e13f84fe9c.js" crossorigin="anonymous"></script>
-            <script src="https://cdn.jsdelivr.net/gh/mcstudios/glightbox/dist/js/glightbox.min.js"></script>
 
-            {{ encore_entry_script_tags('app') }}
-        {% endblock %}
-
-        <script type='text/javascript'>
-            // Some default pre init
-            var Countly = Countly || {};
-            Countly.q = Countly.q || [];
-
-            Countly.app_key = "f18d89edd54dd15a7c1aeaafa1c81559a0efba0e";
-            Countly.url = "https://portfolio-ffed4888b39b1.flex.countly.com";
-
-            Countly.q.push(['track_sessions']);
-            Countly.q.push(['track_pageview']);
-
-            // Load Countly script asynchronously
-            (function() {
-            var cly = document.createElement('script'); cly.type = 'text/javascript';
-            cly.async = true;
-            // Enter URL of script here (see below for other option)
-            cly.src = 'https://cdn.jsdelivr.net/npm/countly-sdk-web@latest/lib/countly.min.js';
-            cly.onload = function(){Countly.init()};
-            var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(cly, s);
-            })();
-        </script>
-
-        <!-- Matomo -->
-        <script>
-        var _paq = window._paq = window._paq || [];
-        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-        _paq.push(['trackPageView']);
-        _paq.push(['enableLinkTracking']);
-        (function() {
-            var u="//analytics.carolinenoyer.fr/";
-            _paq.push(['setTrackerUrl', u+'matomo.php']);
-            _paq.push(['setSiteId', '1']);
-            var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-            g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
-        })();
-        </script>
-        <!-- End Matomo Code -->
+        
 
     </body>
 </html>

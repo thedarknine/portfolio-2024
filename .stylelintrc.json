@@ -1,11 +1,14 @@
 {
-  "extends": "stylelint-config-standard-scss",
+  "extends": [
+    "stylelint-config-recess-order",
+    "stylelint-config-tailwindcss"
+  ],
   "overrides": [
     {
-      "files": ["assets/**/*.css", "assets/**/*.scss"],
-      "customSyntax": "postcss-scss"
+      "files": ["assets/styles/*.css", "assets/styles/*.scss"]
     }
   ],
+  "ignoreFiles": ["**/*.js", "assets/vendor/*"],
   "color-no-hex": [true, {
     "message": "Don't use hex colors like \"%s\""
   }]
