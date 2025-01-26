@@ -1,0 +1,73 @@
+{% extends 'layout.html.twig' %}
+
+{% block title %}Contact{% endblock %}
+
+{% block body %}
+
+
+    <div class="pt-24 ">
+        {% embed "blocks/title.html.twig" with {'pagetitle': "Contact"} %}{% endembed %}
+    </div>
+
+    <div class="container max-width-2xl mx-auto">
+        <h1 class="text-2xl text-turquoise mb-6">Un message ?</h1>
+
+        {% for label, messages in app.flashes(['danger']) %}
+            {% for message in messages %}
+                <div class="mb-6 bg-[#FED5CC] border-t-4 border-error-nine rounded-b-md text-error-nine px-4 py-3 shadow-md" role="alert">
+                    <div class="flex">
+                        <div class="py-1"><i class="fa-solid fa-triangle-exclamation h-6 w-6 text-error-nine mr-4"></i></div>
+                        <div>
+                            <p class="font-bold">Impossible d'envoyer votre message...</p>
+                            <p class="text-sm">{{ message }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+        {% for label, messages in app.flashes(['success']) %}
+            {% for message in messages %}
+                <div class="mb-5 bg-[#D4EFDF] border-t-4 border-[#229954] rounded-b-md text-[#229954] px-4 py-3 shadow-md" role="alert">
+                    <div class="flex">
+                        <div class="py-1"><i class="fa-solid fa-thumbs-up h-6 w-6 text-[#229954] mr-4"></i></div>
+                        <div>
+                            <p class="font-bold">Tout est ok !</p>
+                            <p class="text-sm">{{ message }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        {% endfor %}
+
+        {{ form_start(form) }}
+            {{ form_row(form.name, {
+                label: 'Prénom & Nom',
+                row_class: '',
+                label_class: 'text-blue-dark mr-5 font-semibold',
+                error_item_class: 'text-error-nine',
+                widget_class: 'block w-full text-turquoise px-0.5 border-0 border-b-2 border-slate-light placeholder:text-slate-light focus:ring-0 focus:border-blue-dark',
+                widget_errors_class: 'border-error-nine',
+            }) }}
+            {{ form_row(form.email, {
+                row_class: '',
+                label_class: 'text-blue-dark mr-5 font-semibold',
+                error_item_class: 'text-error-nine',
+                widget_class: 'block w-full text-turquoise px-0.5 border-0 border-b-2 border-slate-light placeholder:text-slate-light focus:ring-0 focus:border-blue-dark',
+                widget_errors_class: 'border-error-nine',
+            }) }}
+            {{ form_row(form.message, {
+                row_class: '',
+                label_class: 'text-blue-dark mr-5 font-semibold',
+                error_item_class: 'text-error-nine',
+                widget_class: 'block w-full h-24 text-turquoise border-1 rounded-md border-slate-light placeholder:text-slate-light focus:ring-0 focus:border-blue-dark',
+                widget_errors_class: 'border-error-nine',
+            }) }}
+
+            <div class="float-right mb-6">
+                <button type="submit" class="nine-btn-primary transform transition hover:scale-105 duration-300 ease-in-out">Envoyer</button>
+            </div>
+            <p class="clear-both"></p>
+        {{ form_end(form) }}
+    </div>
+
+{% endblock %}

@@ -23,6 +23,7 @@ module.exports = {
       'blue-gray-400': '#94a3b8',
       'gray-light-nine': '#CFD7E8',
       'slate-light': '#cbd5e1',
+      'error-nine': '#C90000',
     },
     fontFamily: {
       'accent': ['Spartan', 'sans-serif'],
@@ -33,7 +34,7 @@ module.exports = {
     },
     extend: {
       animation: {
-        'infinite-scroll': 'infinite-scroll 25s linear infinite',
+        'infinite-scroll': 'infinite-scroll 45s linear infinite',
       },
       keyframes: {
         'infinite-scroll': {
@@ -43,5 +44,7 @@ module.exports = {
       }
     },
   },
-  plugins: [],
+  plugins: [
+    require('@tailwindcss/forms'),
+  ],
 }

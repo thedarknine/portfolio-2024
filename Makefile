@@ -41,8 +41,9 @@ security:
 
 ## Switch to dev env
 dev:
-	composer dump-env
+	composer dump-env dev
 	symfony console cache:clear
+	APP_ENV=dev APP_DEBUG=1 php bin/console cache:clear
 
 ## Build to production
 prod:
@@ -50,6 +51,22 @@ prod:
 	composer install --no-dev --optimize-autoloader
 	APP_ENV=prod APP_DEBUG=0 php bin/console cache:clear
 
+## ------
+
+## Start docker
+start:
+	docker compose up -d
+
+## Stop docker
+stop:
+	docker compose stop
+
+shell:
+	docker compose exec app bash
+
+## Show docker logs
+logs-nginx:
+	docker compose logs engine
 
 ## ------
 

@@ -15,10 +15,10 @@ global.$ = global.jQuery = $;
         var scroll = win.scrollTop();
         if (scroll < 40) {
             header.removeClass('stick');
-            document.getElementById("logo").src = "https://medias.carolinenoyer.fr/images/logo-cnoyer-full-250-white.svg";
+            // document.getElementById("logo").src = "https://medias.carolinenoyer.fr/images/logo-cnoyer-full-250-white.svg";
         } else {
             header.addClass('stick');
-            document.getElementById("logo").src = "https://medias.carolinenoyer.fr/images/logo-cnoyer-full-250.svg";
+            // document.getElementById("logo").src = "https://medias.carolinenoyer.fr/images/logo-cnoyer-full-250.svg";
         }
     });
 
