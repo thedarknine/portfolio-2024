@@ -35,3 +35,9 @@ yarn-error.log
 node_modules
 
 *.sql
+
+# Docker
+/.docker/mysql/logs/*
+/.docker/mysql/ql/*
+/.docker/nginx/ssl/*
+/.docker/volumes/*
